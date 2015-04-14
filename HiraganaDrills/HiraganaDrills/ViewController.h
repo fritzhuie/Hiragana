@@ -10,6 +10,17 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic, strong) NSMutableArray* remaining;
+@property (nonatomic, strong) NSDictionary* hirigana;
+@property (nonatomic, strong) NSArray* hiriganaPairs;
+
+@property (weak, nonatomic) IBOutlet UILabel *hiriganaLabel;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *next;
+@property (weak, nonatomic) IBOutlet UIButton *answer;
+
+@property (weak, nonatomic) IBOutlet UIButton *beginDrillButton;
+@property (weak, nonatomic) IBOutlet UIButton *beginDrillButtonSmall;
 
 @end
 
