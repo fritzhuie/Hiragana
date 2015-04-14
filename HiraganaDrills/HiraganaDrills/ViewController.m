@@ -12,6 +12,7 @@
 
 @implementation ViewController{
     NSString *currentDisplayed;
+    bool remainingAppended;
 }
 
 @synthesize next;
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     [self populatehiriganaDictionary];
     [self showDefaultInterface];
+    remainingAppended = NO;
 }
 
 - (void)showDefaultInterface{
@@ -67,6 +69,7 @@
 - (void)showNewHirigana
 {
     answerLabel.hidden = YES;
+    remainingAppended = NO;
     
     if (_remaining.count > 0) {
         int i = rand()%_remaining.count;
@@ -83,8 +86,14 @@
 - (IBAction)help:(id)sender {
     answerLabel.hidden = NO;
     if (currentDisplayed) {
-        answerLabel.text = [self translate:currentDisplayed];
-        [_remaining addObject:currentDisplayed];
+        NSString *displayAnswer = @"\" ";
+        displayAnswer = [displayAnswer stringByAppendingString:[self translate:currentDisplayed]];
+        displayAnswer = [displayAnswer stringByAppendingString:@" \""];
+        answerLabel.text = displayAnswer;
+        if (remainingAppended == NO){
+            [_remaining addObject:currentDisplayed];
+        }
+        remainingAppended = YES;
     }else{
         NSLog(@"Current not set");
         return;
@@ -99,7 +108,6 @@
 - (NSString *) translate:(NSString *)key {
     if ([_hirigana objectForKey:key])
         return [_hirigana objectForKey:key];
-    
     NSLog(@"Failed to find match for key: \"%@\", attempt to return: %@", key, [_hirigana objectForKey:key]);
     return @"err";
     
