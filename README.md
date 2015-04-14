@@ -1,2 +1,0 @@
-# Hiragana
-Japanese learning tool

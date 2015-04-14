@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>021CD4A7-1F68-488E-A704-8A1D6D3787D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HiraganaDrills</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6226133180E34DD1F75049AB5B00F52A84B3771B</key>
+		<string>github.com:fritzhuie/Hiragana.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HiraganaDrills/HiraganaDrills.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6226133180E34DD1F75049AB5B00F52A84B3771B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:fritzhuie/Hiragana.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6226133180E34DD1F75049AB5B00F52A84B3771B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6226133180E34DD1F75049AB5B00F52A84B3771B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hiragana</string>
+		</dict>
+	</array>
+</dict>
+</plist>
