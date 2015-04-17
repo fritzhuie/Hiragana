@@ -12,7 +12,7 @@
 
 @property(nonatomic, strong) NSMutableArray* remaining;
 @property (nonatomic, strong) NSDictionary* hirigana;
-@property (nonatomic, strong) NSArray* hiriganaPairs;
+@property (nonatomic, strong) NSDictionary* hiriganaPairs;
 
 @property (weak, nonatomic) IBOutlet UILabel *hiriganaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
@@ -21,6 +21,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *beginDrillButton;
 @property (weak, nonatomic) IBOutlet UIButton *beginDrillButtonSmall;
+@property (weak, nonatomic) IBOutlet UILabel *counter;
 
 @end
 

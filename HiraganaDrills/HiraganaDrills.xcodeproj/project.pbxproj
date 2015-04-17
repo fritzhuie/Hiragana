@@ -14,6 +14,9 @@
 		1FB860911ADDC42F002C25F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB8608F1ADDC42F002C25F6 /* LaunchScreen.xib */; };
 		1FB8609D1ADDC430002C25F6 /* HiraganaDrillsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB8609C1ADDC430002C25F6 /* HiraganaDrillsTests.m */; };
 		1FB860A71ADDC524002C25F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB860A61ADDC524002C25F6 /* Main.storyboard */; };
+		1FB860B51AE172BB002C25F6 /* OptionsMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860B41AE172BB002C25F6 /* OptionsMenuViewController.m */; };
+		1FB9E2291AE18D020087014D /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9E2281AE18D020087014D /* cog.png */; };
+		1FB9E22C1AE1C2D00087014D /* list-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9E22B1AE1C2D00087014D /* list-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		1FB8609B1ADDC430002C25F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB8609C1ADDC430002C25F6 /* HiraganaDrillsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiraganaDrillsTests.m; sourceTree = "<group>"; };
 		1FB860A61ADDC524002C25F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1FB860B41AE172BB002C25F6 /* OptionsMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsMenuViewController.m; sourceTree = "<group>"; };
+		1FB860B61AE172E6002C25F6 /* OptionsMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionsMenuViewController.h; sourceTree = "<group>"; };
+		1FB9E2281AE18D020087014D /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
+		1FB9E22B1AE1C2D00087014D /* list-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "list-icon.png"; path = "../list-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +92,12 @@
 				1FB860851ADDC42F002C25F6 /* AppDelegate.m */,
 				1FB860871ADDC42F002C25F6 /* ViewController.h */,
 				1FB860881ADDC42F002C25F6 /* ViewController.m */,
+				1FB860B41AE172BB002C25F6 /* OptionsMenuViewController.m */,
+				1FB860B61AE172E6002C25F6 /* OptionsMenuViewController.h */,
 				1FB860A61ADDC524002C25F6 /* Main.storyboard */,
 				1FB8608D1ADDC42F002C25F6 /* Images.xcassets */,
 				1FB8608F1ADDC42F002C25F6 /* LaunchScreen.xib */,
+				1FB9E22A1AE18D0D0087014D /* Resources */,
 				1FB860801ADDC42F002C25F6 /* Supporting Files */,
 			);
 			path = HiraganaDrills;
@@ -117,6 +127,15 @@
 				1FB8609B1ADDC430002C25F6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FB9E22A1AE18D0D0087014D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FB9E22B1AE1C2D00087014D /* list-icon.png */,
+				1FB9E2281AE18D020087014D /* cog.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +221,8 @@
 				1FB860A71ADDC524002C25F6 /* Main.storyboard in Resources */,
 				1FB860911ADDC42F002C25F6 /* LaunchScreen.xib in Resources */,
 				1FB8608E1ADDC42F002C25F6 /* Images.xcassets in Resources */,
+				1FB9E2291AE18D020087014D /* cog.png in Resources */,
+				1FB9E22C1AE1C2D00087014D /* list-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +242,7 @@
 			files = (
 				1FB860891ADDC42F002C25F6 /* ViewController.m in Sources */,
 				1FB860861ADDC42F002C25F6 /* AppDelegate.m in Sources */,
+				1FB860B51AE172BB002C25F6 /* OptionsMenuViewController.m in Sources */,
 				1FB860831ADDC42F002C25F6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +426,7 @@
 				1FB860A21ADDC430002C25F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FB860A31ADDC430002C25F6 /* Build configuration list for PBXNativeTarget "HiraganaDrillsTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +435,7 @@
 				1FB860A51ADDC430002C25F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
