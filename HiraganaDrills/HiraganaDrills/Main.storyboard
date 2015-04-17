@@ -7,6 +7,53 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="U3Q-U4-10Q">
+            <objects>
+                <viewController id="xGL-Zd-XRX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2nz-4H-Kbo"/>
+                        <viewControllerLayoutGuide type="bottom" id="XGy-OB-UHp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8L0-Cx-lec">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Easy Hiragana Drills!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-9G-8VE">
+                                <rect key="frame" x="-8" y="141" width="336" height="74"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-3t-3Wp">
+                                <rect key="frame" x="11" y="267" width="293" height="21"/>
+                                <string key="text">• Tap character to reveal romanji
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="• Say each character out loud" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-Qn-HcD">
+                                <rect key="frame" x="14" y="223" width="293" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBU-60-SNw">
+                                <rect key="frame" x="11" y="308" width="293" height="21"/>
+                                <string key="text">• Tap " √ " if you know it
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0VW-VL-vfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376" y="67"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,10 +65,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CS-Jo-zKh">
+                                <rect key="frame" x="23" y="139" width="329" height="402"/>
+                                <state key="normal" title="(Tap to begin new drill)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x3N-h0-rFJ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L06-9P-OYI">
-                                <rect key="frame" x="183" y="383" width="176" height="116"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="-----&gt;">
+                                <rect key="frame" x="188" y="382" width="164" height="128"/>
+                                <color key="backgroundColor" red="0.86320102985068548" green="0.95686274510000002" blue="0.86839862363410469" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="√">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -36,32 +94,12 @@
                                 <color key="shadowColor" red="0.96352193813131315" green="0.96352193813131315" blue="0.96352193813131315" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-8" height="21"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGC-yy-tSF">
-                                <rect key="frame" x="16" y="383" width="159" height="116"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="?">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="help:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfM-Ll-mTF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B89-Pr-ZCm">
                                 <rect key="frame" x="127" y="323" width="120" height="60"/>
                                 <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="43"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CS-Jo-zKh">
-                                <rect key="frame" x="23" y="200" width="329" height="216"/>
-                                <state key="normal" title="Begin New Drill">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x3N-h0-rFJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYJ-LQ-eYW">
                                 <rect key="frame" x="302" y="20" width="50" height="30"/>
                                 <state key="normal" title="Restart">
@@ -79,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sln-4C-P3g">
-                                <rect key="frame" x="318" y="606" width="41" height="41"/>
+                                <rect key="frame" x="309" y="597" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Yik-gi-M2l"/>
                                     <constraint firstAttribute="width" constant="25" id="my2-Q5-NND"/>
@@ -91,12 +129,36 @@
                                     <segue destination="tlR-Og-psa" kind="modal" id="yDw-0e-rd9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghk-QM-uO5">
-                                <rect key="frame" x="16" y="588" width="50" height="50"/>
-                                <state key="normal" image="list-icon.png">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGC-yy-tSF">
+                                <rect key="frame" x="16" y="60" width="343" height="227"/>
+                                <color key="tintColor" red="0.72934465136587145" green="0.76623964608584105" blue="0.96352193813131315" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="help:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfM-Ll-mTF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwm-5E-y2E">
+                                <rect key="frame" x="23" y="382" width="165" height="128"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.91448762407551476" blue="0.91798612170096638" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="49"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="bigButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHa-w5-wTM"/>
+                                    <action selector="incorrectPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E9K-tu-W1D"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All done!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQo-9z-Xn3">
+                                <rect key="frame" x="154" y="295" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -108,6 +170,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="HiriganaLabel" destination="Fxa-mS-1YD" id="ejj-2w-okq"/>
+                        <outlet property="allDoneLabel" destination="dQo-9z-Xn3" id="xCD-eE-sW7"/>
                         <outlet property="answer" destination="iGC-yy-tSF" id="6nk-ae-qsH"/>
                         <outlet property="answerLabel" destination="B89-Pr-ZCm" id="wFW-Y7-ula"/>
                         <outlet property="beginDrillButton" destination="2CS-Jo-zKh" id="uz1-lw-RJ9"/>
@@ -115,6 +178,7 @@
                         <outlet property="counter" destination="00E-n9-Vb2" id="edz-lY-Uqq"/>
                         <outlet property="hiriganaLabel" destination="Fxa-mS-1YD" id="qiD-XJ-n40"/>
                         <outlet property="next" destination="L06-9P-OYI" id="3RA-HL-xGI"/>
+                        <outlet property="wrongButton" destination="Mwm-5E-y2E" id="zrb-Y2-FNd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,7 +233,6 @@
     </scenes>
     <resources>
         <image name="cog.png" width="100" height="100"/>
-        <image name="list-icon.png" width="189" height="189"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

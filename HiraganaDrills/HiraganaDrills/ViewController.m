@@ -17,13 +17,9 @@
     AppDelegate* delegate;
 }
 
-@synthesize next;
-@synthesize answer;
-@synthesize hiriganaLabel;
-@synthesize answerLabel;
-@synthesize beginDrillButtonSmall;
-@synthesize beginDrillButton;
+@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel;
 @synthesize counter;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +34,7 @@
     hiriganaLabel.hidden = YES;
     answerLabel.hidden = YES;
     beginDrillButton.hidden = NO;
+    allDoneLabel.hidden = YES;
     answer.hidden = YES;
     next.hidden = YES;
     counter.hidden = YES;
@@ -51,12 +48,14 @@
     answer.hidden = NO;
     next.hidden = NO;
     counter.hidden = NO;
+    allDoneLabel.hidden = YES;
 }
 
 - (void)showCompletedInterface {
     [self showDefaultInterface];
     hiriganaLabel.hidden = NO;
     counter.hidden = YES;
+    allDoneLabel.hidden = YES;
 }
 
 - (void)answerCorrectly{
@@ -105,6 +104,9 @@
         hiriganaLabel.text = @"√";
         [self showCompletedInterface];
     }
+}
+- (IBAction)incorrectPressed:(id)sender {
+    
 }
 
 - (IBAction)help:(id)sender {

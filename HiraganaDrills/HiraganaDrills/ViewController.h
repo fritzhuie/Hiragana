@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *beginDrillButton;
 @property (weak, nonatomic) IBOutlet UIButton *beginDrillButtonSmall;
 @property (weak, nonatomic) IBOutlet UILabel *counter;
+@property (weak, nonatomic) IBOutlet UILabel *allDoneLabel;
+@property (weak, nonatomic) IBOutlet UIButton *wrongButton;
 
 @end
 
