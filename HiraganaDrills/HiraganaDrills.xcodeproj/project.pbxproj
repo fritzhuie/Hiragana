@@ -18,6 +18,8 @@
 		1FB9E2291AE18D020087014D /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9E2281AE18D020087014D /* cog.png */; };
 		1FB9E22E1AE1C50D0087014D /* list-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9E22D1AE1C50D0087014D /* list-icon.png */; };
 		1FB9E2301AE1C61D0087014D /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9E22F1AE1C61D0087014D /* table.png */; };
+		1FB9E2351AE1DD810087014D /* card-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9E2341AE1DD810087014D /* card-back.png */; };
+		1FB9E2371AE1E2030087014D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9E2361AE1E2030087014D /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1FB9E2281AE18D020087014D /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
 		1FB9E22D1AE1C50D0087014D /* list-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-icon.png"; sourceTree = "<group>"; };
 		1FB9E22F1AE1C61D0087014D /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
+		1FB9E2341AE1DD810087014D /* card-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card-back.png"; sourceTree = "<group>"; };
+		1FB9E2361AE1E2030087014D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,8 @@
 				1FB860B41AE172BB002C25F6 /* OptionsMenuViewController.m */,
 				1FB860B61AE172E6002C25F6 /* OptionsMenuViewController.h */,
 				1FB860A61ADDC524002C25F6 /* Main.storyboard */,
-				1FB8608D1ADDC42F002C25F6 /* Images.xcassets */,
 				1FB8608F1ADDC42F002C25F6 /* LaunchScreen.xib */,
+				1FB8608D1ADDC42F002C25F6 /* Images.xcassets */,
 				1FB9E22A1AE18D0D0087014D /* Resources */,
 				1FB860801ADDC42F002C25F6 /* Supporting Files */,
 			);
@@ -134,9 +138,11 @@
 		1FB9E22A1AE18D0D0087014D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1FB9E2341AE1DD810087014D /* card-back.png */,
 				1FB9E22F1AE1C61D0087014D /* table.png */,
 				1FB9E22D1AE1C50D0087014D /* list-icon.png */,
 				1FB9E2281AE18D020087014D /* cog.png */,
+				1FB9E2361AE1E2030087014D /* icon.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -224,6 +230,8 @@
 				1FB860A71ADDC524002C25F6 /* Main.storyboard in Resources */,
 				1FB860911ADDC42F002C25F6 /* LaunchScreen.xib in Resources */,
 				1FB9E2301AE1C61D0087014D /* table.png in Resources */,
+				1FB9E2351AE1DD810087014D /* card-back.png in Resources */,
+				1FB9E2371AE1E2030087014D /* icon.png in Resources */,
 				1FB8608E1ADDC42F002C25F6 /* Images.xcassets in Resources */,
 				1FB9E2291AE18D020087014D /* cog.png in Resources */,
 				1FB9E22E1AE1C50D0087014D /* list-icon.png in Resources */,
@@ -360,20 +368,22 @@
 		1FB860A11ADDC430002C25F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HiraganaDrills/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1FB860A21ADDC430002C25F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HiraganaDrills/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

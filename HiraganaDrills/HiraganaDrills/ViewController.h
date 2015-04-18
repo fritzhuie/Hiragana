@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *counter;
 @property (weak, nonatomic) IBOutlet UILabel *allDoneLabel;
 @property (weak, nonatomic) IBOutlet UIButton *wrongButton;
+@property (weak, nonatomic) IBOutlet UIImageView *cardBackImage;
 
 @end
 

@@ -17,7 +17,7 @@
     AppDelegate* delegate;
 }
 
-@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel;
+@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage;
 @synthesize counter;
 
 
@@ -38,6 +38,7 @@
     next.hidden = YES;
     counter.hidden = YES;
     wrongButton.hidden = YES;
+    cardBackImage.hidden = YES;
 }
 
 - (void)showDrillInterface {
@@ -50,6 +51,7 @@
     counter.hidden = NO;
     allDoneLabel.hidden = YES;
     wrongButton.hidden = NO;
+    cardBackImage.hidden = NO;
 }
 
 - (void)showCompletedInterface {
@@ -58,6 +60,7 @@
     counter.hidden = NO;
     allDoneLabel.hidden = YES;
     wrongButton.hidden = YES;
+    cardBackImage.hidden = YES;
 }
 
 - (void)answerCorrectly{
