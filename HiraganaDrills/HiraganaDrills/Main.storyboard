@@ -78,12 +78,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L06-9P-OYI">
                                 <rect key="frame" x="188" y="382" width="164" height="128"/>
                                 <color key="backgroundColor" red="0.86320102985068548" green="0.95686274510000002" blue="0.86839862363410469" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="59"/>
                                 <state key="normal" title="√">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="bigButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9SP-5a-4AL"/>
+                                    <action selector="correctPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYQ-Lp-zP8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ギ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxa-mS-1YD">
@@ -110,12 +111,6 @@
                                     <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLO-D5-a0h"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00E-n9-Vb2">
-                                <rect key="frame" x="23" y="24" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sln-4C-P3g">
                                 <rect key="frame" x="309" y="597" width="50" height="50"/>
                                 <constraints>
@@ -143,18 +138,23 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwm-5E-y2E">
                                 <rect key="frame" x="23" y="382" width="165" height="128"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.91448762407551476" blue="0.91798612170096638" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="49"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="49"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="bigButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHa-w5-wTM"/>
                                     <action selector="incorrectPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E9K-tu-W1D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All done!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQo-9z-Xn3">
                                 <rect key="frame" x="154" y="295" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00E-n9-Vb2">
+                                <rect key="frame" x="23" y="22" width="181" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

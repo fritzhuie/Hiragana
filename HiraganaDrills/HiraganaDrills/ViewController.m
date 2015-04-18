@@ -13,7 +13,7 @@
 
 @implementation ViewController{
     NSString *currentDisplayed;
-    bool remainingAppended;
+    int errorCount;
     AppDelegate* delegate;
 }
 
@@ -26,7 +26,6 @@
     [self populatehiriganaDictionary];
     [self showDefaultInterface];
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-    remainingAppended = NO;
 }
 
 - (void)showDefaultInterface{
@@ -38,6 +37,7 @@
     answer.hidden = YES;
     next.hidden = YES;
     counter.hidden = YES;
+    wrongButton.hidden = YES;
 }
 
 - (void)showDrillInterface {
@@ -49,20 +49,22 @@
     next.hidden = NO;
     counter.hidden = NO;
     allDoneLabel.hidden = YES;
+    wrongButton.hidden = NO;
 }
 
 - (void)showCompletedInterface {
     [self showDefaultInterface];
     hiriganaLabel.hidden = NO;
-    counter.hidden = YES;
+    counter.hidden = NO;
     allDoneLabel.hidden = YES;
+    wrongButton.hidden = YES;
 }
 
 - (void)answerCorrectly{
     [self showNewHirigana];
 }
 
-- (IBAction)bigButtonPressed:(id)sender {
+- (IBAction)correctPressed:(id)sender {
     [self answerCorrectly];
 }
 
@@ -70,16 +72,16 @@
     [self showDrillInterface];
     
     //disable or enable hirigana pairs
-    
+    errorCount = 0;
     if (delegate.includePairs) {
-        [self alert:@"pairs = YES"];
         _remaining = [NSMutableArray arrayWithArray:_hiriganaPairs.allKeys];
         [self sizeForPairs:TRUE];
     }else{
         _remaining = [NSMutableArray arrayWithArray:_hirigana.allKeys];
         [self sizeForPairs:TRUE];
     }
-    counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
+    
+    counter.text = [NSString stringWithFormat:@"Remaining: %lu", (unsigned long)_remaining.count];
     [self showNewHirigana];
 }
 
@@ -90,10 +92,6 @@
 - (void)showNewHirigana
 {
     answerLabel.hidden = YES;
-    remainingAppended = NO;
-    if (_remaining.count) {
-        counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
-    }
     
     if (_remaining.count > 0) {
         int i = rand()%_remaining.count;
@@ -102,29 +100,31 @@
         hiriganaLabel.text = currentDisplayed;
     }else{
         hiriganaLabel.text = @"√";
+        counter.text = [NSString stringWithFormat: @"Repeated: %lu", (long)errorCount];
         [self showCompletedInterface];
+    }
+    
+    if (_remaining.count) {
+        counter.text = [NSString stringWithFormat:@"Remaining: %lu", (unsigned long)_remaining.count];
     }
 }
 - (IBAction)incorrectPressed:(id)sender {
-    
-}
-
-- (IBAction)help:(id)sender {
-    answerLabel.hidden = NO;
     if (currentDisplayed) {
-        NSString *displayAnswer = [NSString stringWithFormat:@"\" %@ \"", [self translate:currentDisplayed]];
-        answerLabel.text = displayAnswer;
-        if (!remainingAppended){
-            [_remaining addObject:currentDisplayed];
-        }
-        remainingAppended = YES;
-        if (_remaining.count) {
-            counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
-        }
+        [_remaining addObject:currentDisplayed];
+        [self showNewHirigana];
+        errorCount+=1;
     }else{
         NSLog(@"Current not set");
         return;
     }
+}
+
+- (IBAction)help:(id)sender {
+    NSString *displayAnswer = [NSString stringWithFormat:@"\" %@ \"", [self translate:currentDisplayed]];
+    answerLabel.text = displayAnswer;
+    answerLabel.hidden = NO;
+    
+    //TODO: Play kana sound
 }
 
 - (void)didReceiveMemoryWarning {
