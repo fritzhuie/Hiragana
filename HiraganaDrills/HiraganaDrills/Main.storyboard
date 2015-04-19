@@ -261,6 +261,18 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" animates="NO" id="8RE-3A-eSx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yry-2N-C2j">
+                                <rect key="frame" x="16" y="116" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sx0-8V-hOR">
+                                <rect key="frame" x="255" y="116" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundToggled:" destination="tlR-Og-psa" eventType="valueChanged" id="QFf-8v-o5A"/>
+                                </connections>
+                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eol-gi-HdQ">
                                 <rect key="frame" x="255" y="82" width="51" height="31"/>
                                 <connections>
@@ -274,11 +286,14 @@
                             <constraint firstItem="Fgv-G7-ccW" firstAttribute="top" secondItem="mcS-Ql-ere" secondAttribute="bottom" constant="50" id="PGr-Sg-VOi"/>
                             <constraint firstItem="Eol-gi-HdQ" firstAttribute="top" secondItem="mcS-Ql-ere" secondAttribute="bottom" constant="50" id="QUd-BV-cwh"/>
                             <constraint firstItem="Eol-gi-HdQ" firstAttribute="trailing" secondItem="3yS-2s-fDJ" secondAttribute="trailingMargin" constant="10" id="htb-tm-4aM"/>
+                            <constraint firstItem="yry-2N-C2j" firstAttribute="leading" secondItem="3yS-2s-fDJ" secondAttribute="leadingMargin" constant="10" id="l86-eY-92F"/>
+                            <constraint firstItem="sx0-8V-hOR" firstAttribute="trailing" secondItem="3yS-2s-fDJ" secondAttribute="trailingMargin" constant="10" id="uFh-oN-rwU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rKE-qO-DcQ"/>
                     <connections>
                         <outlet property="pairToggle" destination="Eol-gi-HdQ" id="V2Z-7i-R5l"/>
+                        <outlet property="soundToggle" destination="sx0-8V-hOR" id="o0p-dm-XQd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukE-Pa-tVl" userLabel="First Responder" sceneMemberID="firstResponder"/>

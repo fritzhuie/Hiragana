@@ -15,18 +15,20 @@
 }
 
 @synthesize pairToggle;
+@synthesize soundToggle;
 
 - (void)viewDidLoad {
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     [pairToggle setOn:delegate.includePairs];
+    [soundToggle setOn:delegate.sound];
     
 }
 
 - (IBAction)pairsSwitchToggled:(id)sender {
-    if ([self.pairToggle isOn])
-        delegate.includePairs = YES;
-    else
-        delegate.includePairs = NO;
+    delegate.includePairs = [self.pairToggle isOn];
+}
+- (IBAction)soundToggled:(id)sender {
+    delegate.sound = [self.soundToggle isOn];
 }
 
 @end

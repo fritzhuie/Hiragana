@@ -11,5 +11,6 @@
 @interface OptionsMenuViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *pairToggle;
+@property (weak, nonatomic) IBOutlet UISwitch *soundToggle;
 
 @end
