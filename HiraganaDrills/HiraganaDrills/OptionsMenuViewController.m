@@ -14,8 +14,12 @@
     AppDelegate* delegate;
 }
 
+@synthesize pairToggle;
+
 - (void)viewDidLoad {
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    [pairToggle setOn:delegate.includePairs];
+    
 }
 
 - (IBAction)pairsSwitchToggled:(id)sender {
