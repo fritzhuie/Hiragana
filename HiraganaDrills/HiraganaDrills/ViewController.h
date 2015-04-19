@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@import AVFoundation;
+@import Foundation;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AVAudioPlayerDelegate>
 
 @property(nonatomic, strong) NSMutableArray* remaining;
 @property (nonatomic, strong) NSDictionary* hirigana;
@@ -25,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *allDoneLabel;
 @property (weak, nonatomic) IBOutlet UIButton *wrongButton;
 @property (weak, nonatomic) IBOutlet UIImageView *cardBackImage;
+
+@property (strong, nonatomic) AVAudioPlayer* soundPlayer;
 
 @end
 

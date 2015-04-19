@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
-@import Foundation;
 
 @implementation ViewController{
     NSString *currentDisplayed;
@@ -19,6 +18,7 @@
 
 @synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage;
 @synthesize counter;
+@synthesize soundPlayer;
 
 
 - (void)viewDidLoad {
@@ -128,6 +128,23 @@
     answerLabel.hidden = NO;
     
     //TODO: Play kana sound
+    NSString* audioFilePath = [[NSBundle mainBundle] pathForResource: @"a"ofType:@"mp3"];
+    NSURL *pathAsURL = [[NSURL alloc]initFileURLWithPath:audioFilePath];
+    
+    // Init audio player
+    NSError *error;
+    soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:pathAsURL error:&error];
+    
+    // Check out what's wrong in case that the player doesn't init.
+    if (error) {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    else{
+        //pre-load the audio into the buffer
+        // may avoid, as it's not always possible to pre-load the audio.
+        [soundPlayer prepareToPlay];
+        [soundPlayer play];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
