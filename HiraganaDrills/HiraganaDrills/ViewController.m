@@ -84,7 +84,7 @@
         [self sizeForPairs:TRUE];
     }
     
-    counter.text = [NSString stringWithFormat:@"Remaining: %lu", (unsigned long)_remaining.count];
+    counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
     [self showNewHirigana];
 }
 
@@ -103,12 +103,12 @@
         hiriganaLabel.text = currentDisplayed;
     }else{
         hiriganaLabel.text = @"√";
-        counter.text = [NSString stringWithFormat: @"Repeated: %lu", (long)errorCount];
+        counter.text = [NSString stringWithFormat: @"Repeats: %lu", (long)errorCount];
         [self showCompletedInterface];
     }
     
     if (_remaining.count) {
-        counter.text = [NSString stringWithFormat:@"Remaining: %lu", (unsigned long)_remaining.count];
+        counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
     }
 }
 - (IBAction)incorrectPressed:(id)sender {
