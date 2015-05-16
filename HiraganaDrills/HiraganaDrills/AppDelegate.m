@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "hiriganaLibrary.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     self.includePairs = NO;
     self.sound = NO;
+    initializePairDict();
     return YES;
 }
 

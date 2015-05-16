@@ -8,6 +8,31 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "hiriganaLibrary.h"
+@import Foundation;
+
+@interface ViewController () <AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate>
+
+@property(nonatomic, strong) NSMutableArray* remaining;
+@property (nonatomic, strong) NSDictionary* hirigana;
+
+@property (weak, nonatomic) IBOutlet UILabel *hiriganaLabel;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *next;
+@property (weak, nonatomic) IBOutlet UIButton *answer;
+
+@property (weak, nonatomic) IBOutlet UIButton *beginDrillButton;
+@property (weak, nonatomic) IBOutlet UIButton *beginDrillButtonSmall;
+@property (weak, nonatomic) IBOutlet UILabel *counter;
+@property (weak, nonatomic) IBOutlet UILabel *allDoneLabel;
+@property (weak, nonatomic) IBOutlet UIButton *wrongButton;
+@property (weak, nonatomic) IBOutlet UIImageView *cardBackImage;
+
+@property (strong, nonatomic) AVAudioPlayer* soundPlayer;
+@property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
+@property (weak, nonatomic) IBOutlet UIButton *soundToggle;
+
+@end
 
 
 @implementation ViewController{
@@ -16,16 +41,16 @@
     AppDelegate* delegate;
 }
 
-@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage;
+@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage, soundToggle;
 @synthesize counter;
 @synthesize soundPlayer;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self populatehiriganaDictionary];
     [self showDefaultInterface];
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    self.synthesizer = [[AVSpeechSynthesizer alloc] init];
 }
 
 - (void)showDefaultInterface{
@@ -39,6 +64,7 @@
     counter.hidden = YES;
     wrongButton.hidden = YES;
     cardBackImage.hidden = YES;
+    soundToggle.hidden = YES;
 }
 
 - (void)showDrillInterface {
@@ -52,6 +78,7 @@
     allDoneLabel.hidden = YES;
     wrongButton.hidden = NO;
     cardBackImage.hidden = NO;
+    soundToggle.hidden = NO;
 }
 
 - (void)showCompletedInterface {
@@ -61,6 +88,12 @@
     allDoneLabel.hidden = YES;
     wrongButton.hidden = YES;
     cardBackImage.hidden = YES;
+    soundToggle.hidden = YES;
+}
+
+- (IBAction)soundTogglePressed:(id)sender {
+    delegate.sound = delegate.sound ? NO : YES;
+    [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
 }
 
 - (void)answerCorrectly{
@@ -77,10 +110,10 @@
     //disable or enable hirigana pairs
     errorCount = 0;
     if (delegate.includePairs) {
-        _remaining = [NSMutableArray arrayWithArray:_hiriganaPairs.allKeys];
+        _remaining = [NSMutableArray arrayWithArray:HIRAGANA_PAIR_DICT.allKeys];
         [self sizeForPairs:TRUE];
     }else{
-        _remaining = [NSMutableArray arrayWithArray:_hirigana.allKeys];
+        _remaining = [NSMutableArray arrayWithArray:HIRAGANA_DICT.allKeys];
         [self sizeForPairs:TRUE];
     }
     
@@ -129,26 +162,33 @@
     
     //TODO: Play kana sound
     if (delegate.sound) {
-        NSLog(@"sound is on");
-        NSString* audioFilePath = [[NSBundle mainBundle] pathForResource: @"a"ofType:@"mp3"];
-        NSURL *pathAsURL = [[NSURL alloc]initFileURLWithPath:audioFilePath];
-        
-        // Init audio player
-        NSError *error;
-        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:pathAsURL error:&error];
-        
-        // Check out what's wrong in case that the player doesn't init.
-        if (error) {
-            NSLog(@"%@", [error localizedDescription]);
-        }
-        else{
-            //pre-load the audio into the buffer
-            // may avoid, as it's not always possible to pre-load the audio.
-            [soundPlayer prepareToPlay];
-            [soundPlayer play];
+        NSString* soundPath = [NSString stringWithFormat:@"kana/%@", HIRAGANA_PAIR_DICT[currentDisplayed]];
+        if(soundPath)
+            NSLog(soundPath);
+        else
+            NSLog(@"Soundpath not defined");
+        NSString* audioFilePath = [[NSBundle mainBundle] pathForResource:soundPath ofType:@"mp3"];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:audioFilePath]) {
+            NSLog(@"path exists");
+            NSURL *pathAsURL = [[NSURL alloc]initFileURLWithPath:audioFilePath];
+
+            // Init audio player
+            NSError *error;
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:pathAsURL error:&error];
+            
+            // Check out what's wrong in case that the player doesn't init.
+            if (error) {
+                NSLog(@"%@", [error localizedDescription]);
+            }
+            else{
+                //pre-load the audio into the buffer
+                // may avoid, as it's not always possible to pre-load the audio.
+                [soundPlayer prepareToPlay];
+                [soundPlayer play];
+            }
         }
     }else{
-        NSLog(@"sound is off");
+        NSLog(@"Sound is off");
     }
 }
 
@@ -158,10 +198,10 @@
 }
 
 - (NSString *) translate:(NSString *)key {
-    if ([_hiriganaPairs objectForKey:key])
-        return [_hiriganaPairs objectForKey:key];
-    NSLog(@"Failed to find match for key: \"%@\", attempt to return: %@", key, [_hiriganaPairs objectForKey:key]);
-    return @"err";
+    if ([HIRAGANA_PAIR_DICT objectForKey:key])
+        return [HIRAGANA_PAIR_DICT objectForKey:key];
+    else
+        return @"error";
 }
 
 - (void) alert: (NSString*) message{
@@ -171,62 +211,6 @@
                                            cancelButtonTitle:@"close"
                                            otherButtonTitles: nil];
     [alert show];
-}
-
-- (void) populatehiriganaDictionary{
-    _hirigana = @{
-                  @"ぁ": @"a", @"い": @"i", @"う": @"u", @"え": @"e",
-                  @"お": @"o", @"か": @"ka", @"き": @"ki", @"く": @"ku",
-                  @"け": @"ke", @"こ": @"ko", @"さ": @"sa", @"し": @"shi",
-                  @"す": @"su", @"せ": @"se", @"そ": @"so", @"た": @"ta",
-                  @"ち": @"chi", @"つ": @"tsu", @"て": @"te", @"と": @"to",
-                  @"な": @"na", @"に": @"ni", @"ぬ": @"nu", @"ね": @"ne",
-                  @"の": @"no", @"は": @"ha", @"ひ": @"hi", @"ふ": @"hu",
-                  @"へ": @"he", @"ほ": @"ho", @"ま": @"ma", @"み": @"mi",
-                  @"む": @"mu", @"め": @"me", @"も": @"mo", @"や": @"ya",
-                  @"ゆ": @"yu", @"よ": @"yo", @"ら": @"ra", @"り": @"ri",
-                  @"る": @"ru", @"れ": @"re", @"ろ": @"ro", @"わ": @"wa",
-                  @"を": @"wo", @"が": @"ga", @"ぎ": @"gi", @"ぐ": @"gu",
-                  @"げ": @"ge", @"ご": @"go", @"ざ": @"za", @"じ": @"ji",
-                  @"ず": @"zu", @"ぜ": @"ze", @"ぞ": @"zo", @"だ": @"da",
-                  @"ぢ": @"di", @"づ": @"du", @"で": @"de", @"ど": @"do", 
-                  @"ば": @"ba", @"び": @"bi", @"ぶ": @"bu", @"べ": @"be", 
-                  @"ぼ": @"bo", @"ぱ": @"pa", @"ぴ": @"pi", @"ぷ": @"pu", 
-                  @"ぺ": @"pe", @"ぽ": @"po", @"ん": @"n"
-                  };
-    
-    _hiriganaPairs = @{
-                       @"ぁ": @"a", @"い": @"i", @"う": @"u", @"え": @"e",
-                       @"お": @"o", @"か": @"ka", @"き": @"ki", @"く": @"ku",
-                       @"け": @"ke", @"こ": @"ko", @"さ": @"sa", @"し": @"shi",
-                       @"す": @"su", @"せ": @"se", @"そ": @"so", @"た": @"ta",
-                       @"ち": @"chi", @"つ": @"tsu", @"て": @"te", @"と": @"to",
-                       @"な": @"na", @"に": @"ni", @"ぬ": @"nu", @"ね": @"ne",
-                       @"の": @"no", @"は": @"ha", @"ひ": @"hi", @"ふ": @"hu",
-                       @"へ": @"he", @"ほ": @"ho", @"ま": @"ma", @"み": @"mi",
-                       @"む": @"mu", @"め": @"me", @"も": @"mo", @"や": @"ya",
-                       @"ゆ": @"yu", @"よ": @"yo", @"ら": @"ra", @"り": @"ri",
-                       @"る": @"ru", @"れ": @"re", @"ろ": @"ro", @"わ": @"wa",
-                       @"を": @"wo", @"が": @"ga", @"ぎ": @"gi", @"ぐ": @"gu",
-                       @"げ": @"ge", @"ご": @"go", @"ざ": @"za", @"じ": @"ji",
-                       @"ず": @"zu", @"ぜ": @"ze", @"ぞ": @"zo", @"だ": @"da",
-                       @"ぢ": @"di", @"づ": @"du", @"で": @"de", @"ど": @"do",
-                       @"ば": @"ba", @"び": @"bi", @"ぶ": @"bu", @"べ": @"be",
-                       @"ぼ": @"bo", @"ぱ": @"pa", @"ぴ": @"pi", @"ぷ": @"pu",
-                       @"ぺ": @"pe", @"ぽ": @"po", @"ん": @"n",
-                       @"きゃ": @"kya", @"きゅ": @"kyu", @"きょ": @"kyo",
-                       @"ぎゃ": @"gya", @"ぎゅ": @"gyu", @"ぎょ": @"gyo", 
-                       @"しゃ": @"shya", @"しゅ": @"shyu", @"しょ": @"shyo", 
-                       @"じゃ": @"jya", @"じゅ": @"jyu", @"じょ": @"jyo", 
-                       @"ちゃ": @"chya", @"ちゅ": @"chyu", @"ちょ": @"chyo", 
-                       @"にゃ": @"nya", @"にゅ": @"nyu", @"にょ": @"nyo", 
-                       @"ひゃ": @"hya", @"ひゅ": @"hyu", @"ひょ": @"hyo", 
-                       @"びゃ": @"bya", @"びゅ": @"byu", @"びょ": @"byo", 
-                       @"ぴゃ": @"pya", @"ぴゅ": @"pyu", @"ぴょ": @"pyo",
-                       @"みゃ": @"mya", @"みゅ": @"myu", @"みょ": @"myo",
-                       @"りゃ": @"rya", @"りゅ": @"ryu", @"りょ": @"ryo",
-                       @"ぢゃ": @"dya(ja)", @"ぢゅ": @"dyu(ju)", @"ぢょ": @"dyo(jo)"
-                       };
 }
 
 @end

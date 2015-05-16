@@ -181,17 +181,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" misplaced="YES" text="ギ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxa-mS-1YD">
-                                <rect key="frame" x="-146" y="58" width="599" height="221"/>
+                                <rect key="frame" x="-232" y="153" width="599" height="221"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="164"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-8" height="21"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tho-v6-r7b">
+                                <rect key="frame" x="228" y="58" width="695" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="NR9-C8-S9u"/>
+                                    <constraint firstAttribute="height" constant="40" id="yeD-Lb-hYZ"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="soundTogglePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZq-Cr-9G9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="dQo-9z-Xn3" secondAttribute="centerX" id="1SN-gC-02H"/>
+                            <constraint firstItem="Tho-v6-r7b" firstAttribute="top" secondItem="t2i-pu-Dlo" secondAttribute="bottom" constant="65" id="1VY-hb-2gz"/>
                             <constraint firstAttribute="centerX" secondItem="Mwm-5E-y2E" secondAttribute="centerX" constant="-75" id="47H-03-i4h"/>
                             <constraint firstAttribute="centerX" secondItem="Fxa-mS-1YD" secondAttribute="centerX" id="4Qc-Ch-F1D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sln-4C-P3g" secondAttribute="trailing" constant="10" id="4bu-2W-ML4"/>
@@ -202,6 +216,7 @@
                             <constraint firstAttribute="centerX" secondItem="2CS-Jo-zKh" secondAttribute="centerX" id="Cju-29-VtY"/>
                             <constraint firstItem="iGC-yy-tSF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="58" id="D2z-36-pds"/>
                             <constraint firstAttribute="centerX" secondItem="L06-9P-OYI" secondAttribute="centerX" constant="75" id="Fbc-Ph-x04"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tho-v6-r7b" secondAttribute="trailing" constant="15" id="Y4U-3E-0Dg"/>
                             <constraint firstItem="00E-n9-Vb2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="67" id="aQj-7w-Euh"/>
                             <constraint firstItem="B89-Pr-ZCm" firstAttribute="top" secondItem="QoV-Ee-RE0" secondAttribute="bottom" constant="15" id="d6A-Dj-IBv"/>
                             <constraint firstItem="g86-vP-1Ph" firstAttribute="top" secondItem="L06-9P-OYI" secondAttribute="bottom" constant="100" id="dJf-gC-Wks"/>
@@ -227,6 +242,7 @@
                         <outlet property="counter" destination="00E-n9-Vb2" id="edz-lY-Uqq"/>
                         <outlet property="hiriganaLabel" destination="Fxa-mS-1YD" id="qiD-XJ-n40"/>
                         <outlet property="next" destination="L06-9P-OYI" id="3RA-HL-xGI"/>
+                        <outlet property="soundToggle" destination="Tho-v6-r7b" id="fUH-1D-dZL"/>
                         <outlet property="wrongButton" destination="Mwm-5E-y2E" id="zrb-Y2-FNd"/>
                     </connections>
                 </viewController>
