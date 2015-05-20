@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property bool includePairs;
 @property bool sound;
+@property bool katakanaSelected;
 
 @end
 

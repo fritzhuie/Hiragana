@@ -11,6 +11,7 @@
 		1FA4F8081B070765002385EF /* kana in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F8071B070765002385EF /* kana */; };
 		1FA4F80D1B0C0EDA002385EF /* nosound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80C1B0C0EDA002385EF /* nosound.png */; };
 		1FA4F80F1B0C0EE9002385EF /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80E1B0C0EE9002385EF /* sound.png */; };
+		1FA4F8141B0D1677002385EF /* welcomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4F8131B0D1677002385EF /* welcomePageViewController.m */; };
 		1FB860831ADDC42F002C25F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860821ADDC42F002C25F6 /* main.m */; };
 		1FB860861ADDC42F002C25F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860851ADDC42F002C25F6 /* AppDelegate.m */; };
 		1FB860891ADDC42F002C25F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860881ADDC42F002C25F6 /* ViewController.m */; };
@@ -42,6 +43,8 @@
 		1FA4F8071B070765002385EF /* kana */ = {isa = PBXFileReference; lastKnownFileType = folder; name = kana; path = ../kana; sourceTree = "<group>"; };
 		1FA4F80C1B0C0EDA002385EF /* nosound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosound.png; sourceTree = "<group>"; };
 		1FA4F80E1B0C0EE9002385EF /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
+		1FA4F8121B0D1677002385EF /* welcomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = welcomePageViewController.h; path = ../welcomePageViewController.h; sourceTree = "<group>"; };
+		1FA4F8131B0D1677002385EF /* welcomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = welcomePageViewController.m; path = ../welcomePageViewController.m; sourceTree = "<group>"; };
 		1FB8607D1ADDC42F002C25F6 /* HiraganaDrills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaDrills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB860811ADDC42F002C25F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB860821ADDC42F002C25F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		1FB8607F1ADDC42F002C25F6 /* HiraganaDrills */ = {
 			isa = PBXGroup;
 			children = (
+				1FA4F8121B0D1677002385EF /* welcomePageViewController.h */,
+				1FA4F8131B0D1677002385EF /* welcomePageViewController.m */,
 				1FB860841ADDC42F002C25F6 /* AppDelegate.h */,
 				1FB860851ADDC42F002C25F6 /* AppDelegate.m */,
 				1FB860871ADDC42F002C25F6 /* ViewController.h */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA4F8141B0D1677002385EF /* welcomePageViewController.m in Sources */,
 				1FB860891ADDC42F002C25F6 /* ViewController.m in Sources */,
 				1FB860861ADDC42F002C25F6 /* AppDelegate.m in Sources */,
 				1FB860B51AE172BB002C25F6 /* OptionsMenuViewController.m in Sources */,

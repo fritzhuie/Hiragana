@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     self.includePairs = YES;
     self.sound = NO;
+    self.katakanaSelected = NO;
     initializePairDict();
     return YES;
 }

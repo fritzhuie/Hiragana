@@ -47,10 +47,12 @@
 @synthesize counter;
 @synthesize soundPlayer;
 
+#define SOUND_TOGGLE_DIABLED YES
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self showDefaultInterface];
+    [self startDrill];
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
@@ -82,14 +84,14 @@
     allDoneLabel.hidden = YES;
     wrongButton.hidden = NO;
     cardBackImage.hidden = NO;
-    soundToggle.hidden = NO;
+    soundToggle.hidden = SOUND_TOGGLE_DIABLED;
     revealAnswerButton.hidden = YES;
 }
 
 - (void)showCompletedInterface {
     [self showDefaultInterface];
     hiriganaLabel.hidden = NO;
-    counter.hidden = NO;
+    counter.hidden = YES;
     allDoneLabel.hidden = YES;
     wrongButton.hidden = YES;
     cardBackImage.hidden = YES;
@@ -111,8 +113,12 @@
 }
 
 - (IBAction)Start:(id)sender {
+    [self startDrill];
+}
+
+- (void)startDrill{
     [self showDrillInterface];
-    
+
     //disable or enable hirigana pairs
     errorCount = 0;
     if (delegate.includePairs) {
@@ -122,7 +128,7 @@
         _remaining = [NSMutableArray arrayWithArray:HIRAGANA_DICT.allKeys];
         [self sizeForPairs:TRUE];
     }
-    
+
     counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
     [self showNewHirigana];
 }
