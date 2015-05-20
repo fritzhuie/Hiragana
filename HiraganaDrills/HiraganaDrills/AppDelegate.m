@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.includePairs = NO;
+    self.includePairs = YES;
     self.sound = NO;
     initializePairDict();
     return YES;

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0066781AE756E5009A1173 /* nosound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0066761AE756E5009A1173 /* nosound.png */; };
-		1F0066791AE756E5009A1173 /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0066771AE756E5009A1173 /* sound.png */; };
 		1F00667C1AE83978009A1173 /* hiriganaLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F00667B1AE83978009A1173 /* hiriganaLibrary.m */; };
 		1FA4F8081B070765002385EF /* kana in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F8071B070765002385EF /* kana */; };
+		1FA4F80D1B0C0EDA002385EF /* nosound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80C1B0C0EDA002385EF /* nosound.png */; };
+		1FA4F80F1B0C0EE9002385EF /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80E1B0C0EE9002385EF /* sound.png */; };
 		1FB860831ADDC42F002C25F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860821ADDC42F002C25F6 /* main.m */; };
 		1FB860861ADDC42F002C25F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860851ADDC42F002C25F6 /* AppDelegate.m */; };
 		1FB860891ADDC42F002C25F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860881ADDC42F002C25F6 /* ViewController.m */; };
@@ -37,11 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F0066761AE756E5009A1173 /* nosound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosound.png; sourceTree = "<group>"; };
-		1F0066771AE756E5009A1173 /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
 		1F00667A1AE8354D009A1173 /* hiriganaLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hiriganaLibrary.h; sourceTree = "<group>"; };
 		1F00667B1AE83978009A1173 /* hiriganaLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hiriganaLibrary.m; sourceTree = "<group>"; };
 		1FA4F8071B070765002385EF /* kana */ = {isa = PBXFileReference; lastKnownFileType = folder; name = kana; path = ../kana; sourceTree = "<group>"; };
+		1FA4F80C1B0C0EDA002385EF /* nosound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosound.png; sourceTree = "<group>"; };
+		1FA4F80E1B0C0EE9002385EF /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
 		1FB8607D1ADDC42F002C25F6 /* HiraganaDrills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaDrills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB860811ADDC42F002C25F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB860821ADDC42F002C25F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,10 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				1FA4F8071B070765002385EF /* kana */,
+				1FA4F80E1B0C0EE9002385EF /* sound.png */,
+				1FA4F80C1B0C0EDA002385EF /* nosound.png */,
 				1FB9E2341AE1DD810087014D /* card-back.png */,
 				1FB9E22F1AE1C61D0087014D /* table.png */,
-				1F0066761AE756E5009A1173 /* nosound.png */,
-				1F0066771AE756E5009A1173 /* sound.png */,
 				1FB9E22D1AE1C50D0087014D /* list-icon.png */,
 				1FB9E2281AE18D020087014D /* cog.png */,
 				1FB9E2361AE1E2030087014D /* icon.png */,
@@ -245,14 +245,14 @@
 				1FB860A71ADDC524002C25F6 /* Main.storyboard in Resources */,
 				1FB860911ADDC42F002C25F6 /* LaunchScreen.xib in Resources */,
 				1FB9E2301AE1C61D0087014D /* table.png in Resources */,
-				1F0066781AE756E5009A1173 /* nosound.png in Resources */,
 				1FB9E2351AE1DD810087014D /* card-back.png in Resources */,
+				1FA4F80D1B0C0EDA002385EF /* nosound.png in Resources */,
 				1FB9E2371AE1E2030087014D /* icon.png in Resources */,
 				1FB8608E1ADDC42F002C25F6 /* Images.xcassets in Resources */,
 				1FB9E2291AE18D020087014D /* cog.png in Resources */,
 				1FB9E22E1AE1C50D0087014D /* list-icon.png in Resources */,
-				1F0066791AE756E5009A1173 /* sound.png in Resources */,
 				1FA4F8081B070765002385EF /* kana in Resources */,
+				1FA4F80F1B0C0EE9002385EF /* sound.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

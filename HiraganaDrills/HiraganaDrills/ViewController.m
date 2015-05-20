@@ -31,6 +31,7 @@
 @property (strong, nonatomic) AVAudioPlayer* soundPlayer;
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 @property (weak, nonatomic) IBOutlet UIButton *soundToggle;
+@property (weak, nonatomic) IBOutlet UIButton *revealAnswerButton;
 
 @end
 
@@ -38,10 +39,11 @@
 @implementation ViewController{
     NSString *currentDisplayed;
     int errorCount;
+    bool answerRevealed;
     AppDelegate* delegate;
 }
 
-@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage, soundToggle;
+@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage, soundToggle, revealAnswerButton;
 @synthesize counter;
 @synthesize soundPlayer;
 
@@ -51,6 +53,7 @@
     [self showDefaultInterface];
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
+    [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
 }
 
 - (void)showDefaultInterface{
@@ -65,6 +68,7 @@
     wrongButton.hidden = YES;
     cardBackImage.hidden = YES;
     soundToggle.hidden = YES;
+    revealAnswerButton.hidden = YES;
 }
 
 - (void)showDrillInterface {
@@ -79,6 +83,7 @@
     wrongButton.hidden = NO;
     cardBackImage.hidden = NO;
     soundToggle.hidden = NO;
+    revealAnswerButton.hidden = YES;
 }
 
 - (void)showCompletedInterface {
@@ -89,6 +94,7 @@
     wrongButton.hidden = YES;
     cardBackImage.hidden = YES;
     soundToggle.hidden = YES;
+    revealAnswerButton.hidden = YES;
 }
 
 - (IBAction)soundTogglePressed:(id)sender {
@@ -128,6 +134,7 @@
 - (void)showNewHirigana
 {
     answerLabel.hidden = YES;
+    revealAnswerButton.hidden = NO;
     
     if (_remaining.count > 0) {
         int i = rand()%_remaining.count;
@@ -155,11 +162,21 @@
     }
 }
 
+- (IBAction)revealAnswerButtonPressed:(id)sender
+{
+    [self revealAnswer];
+    revealAnswerButton.hidden = YES;
+}
+
 - (IBAction)help:(id)sender {
+
+}
+- (void)revealAnswer
+{
     NSString *displayAnswer = [NSString stringWithFormat:@"\" %@ \"", [self translate:currentDisplayed]];
     answerLabel.text = displayAnswer;
     answerLabel.hidden = NO;
-    
+
     //TODO: Play kana sound
     if (delegate.sound) {
         NSString* soundPath = [NSString stringWithFormat:@"kana/%@", HIRAGANA_PAIR_DICT[currentDisplayed]];
@@ -175,7 +192,7 @@
             // Init audio player
             NSError *error;
             soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:pathAsURL error:&error];
-            
+
             // Check out what's wrong in case that the player doesn't init.
             if (error) {
                 NSLog(@"%@", [error localizedDescription]);
