@@ -116,18 +116,15 @@ BOOL katakanaSelected;
     [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
 }
 
-- (void)answerCorrectly{
-    [self showNewHirigana];
-}
-
 - (IBAction)correctPressed:(id)sender {
-    [self answerCorrectly];
+    [self showNewHirigana];
 }
 
 - (IBAction)Start:(id)sender {
     [self startDrill];
 }
 
+//startDrill
 - (void)startDrill{
     [self showDrillInterface];
 
@@ -158,6 +155,7 @@ BOOL katakanaSelected;
         counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
     }
 }
+
 - (IBAction)incorrectPressed:(id)sender {
     if (currentDisplayed) {
         [_remaining addObject:currentDisplayed];
