@@ -32,6 +32,7 @@
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 @property (weak, nonatomic) IBOutlet UIButton *soundToggle;
 @property (weak, nonatomic) IBOutlet UIButton *revealAnswerButton;
+@property (weak, nonatomic) IBOutlet UIButton *pairToggleButton;
 
 @end
 
@@ -41,6 +42,7 @@ BOOL katakanaSelected;
     NSString *currentDisplayed;
     int errorCount;
     bool answerRevealed;
+    bool willIncludePairs;
     AppDelegate* delegate;
     NSDictionary* kanaLibrary;
 }
@@ -48,7 +50,7 @@ BOOL katakanaSelected;
 + (bool)katakanaSelected { return katakanaSelected; }
 + (void)setKatakana:(bool)setKatakana { katakanaSelected = setKatakana; }
 
-@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage, soundToggle, revealAnswerButton;
+@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage, soundToggle, revealAnswerButton, pairToggleButton;
 @synthesize counter;
 @synthesize soundPlayer;
 
@@ -57,16 +59,10 @@ BOOL katakanaSelected;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    willIncludePairs = YES;
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
-    if (katakanaSelected){
-        kanaLibrary = KATAKANA_PAIR_DICT;
-        NSLog(@"katakana set");
-    }else{
-        kanaLibrary = HIRAGANA_PAIR_DICT;
-        NSLog(@"hirigana set");
-    }
     [self startDrill];
 }
 
@@ -115,6 +111,17 @@ BOOL katakanaSelected;
     delegate.sound = delegate.sound ? NO : YES;
     [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
 }
+- (IBAction)pairTogglePressed:(id)sender {
+    willIncludePairs = willIncludePairs ? NO : YES;
+    if (willIncludePairs) {
+        [pairToggleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [pairToggleButton setBackgroundImage:nil forState:UIControlStateNormal];
+    }else{
+        [pairToggleButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [pairToggleButton setBackgroundImage:[UIImage imageNamed:@"buttonStrikethrough"] forState:UIControlStateNormal];
+    }
+    [self startDrill];
+}
 
 - (IBAction)correctPressed:(id)sender {
     [self showNewHirigana];
@@ -126,13 +133,20 @@ BOOL katakanaSelected;
 
 //startDrill
 - (void)startDrill{
-    [self showDrillInterface];
+    if (katakanaSelected){
+        kanaLibrary = (willIncludePairs ? KATAKANA_PAIR_DICT : KATAKANA_DICT);
+        NSLog(@"katakana set");
+    }else{
+        kanaLibrary = (willIncludePairs ? HIRAGANA_PAIR_DICT : HIRAGANA_DICT);
+        NSLog(@"hirigana set");
+    }
 
     errorCount = 0;
     _remaining = [NSMutableArray arrayWithArray:kanaLibrary.allKeys];
 
     counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
     [self showNewHirigana];
+    [self showDrillInterface];
 }
 
 - (void)showNewHirigana

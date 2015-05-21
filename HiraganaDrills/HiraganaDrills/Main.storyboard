@@ -225,6 +225,19 @@
                                     <segue destination="xGL-Zd-XRX" kind="modal" modalTransitionStyle="flipHorizontal" id="xJs-F3-kCv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3N-8S-ZZd">
+                                <rect key="frame" x="6" y="521" width="39" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QfH-uU-GPc"/>
+                                    <constraint firstAttribute="height" constant="39" id="uvO-oi-qua"/>
+                                </constraints>
+                                <state key="normal" title="ぢゃ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pairTogglePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDq-ca-27A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -239,6 +252,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="jYJ-LQ-eYW" secondAttribute="trailing" constant="-5" id="CmB-iG-YSv"/>
                             <constraint firstItem="g86-vP-1Ph" firstAttribute="top" secondItem="gz4-ce-kPn" secondAttribute="bottom" constant="100" id="D0J-LO-ZRI"/>
                             <constraint firstItem="iGC-yy-tSF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="58" id="D2z-36-pds"/>
+                            <constraint firstItem="g86-vP-1Ph" firstAttribute="top" secondItem="L3N-8S-ZZd" secondAttribute="bottom" constant="10" id="EXy-yz-Bb2"/>
                             <constraint firstAttribute="centerX" secondItem="L06-9P-OYI" secondAttribute="centerX" constant="75" id="Fbc-Ph-x04"/>
                             <constraint firstAttribute="centerX" secondItem="gz4-ce-kPn" secondAttribute="centerX" constant="-75" id="OGi-Wz-k7e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tho-v6-r7b" secondAttribute="trailing" constant="50" id="Y4U-3E-0Dg"/>
@@ -246,6 +260,7 @@
                             <constraint firstItem="00E-n9-Vb2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="67" id="aQj-7w-Euh"/>
                             <constraint firstItem="B89-Pr-ZCm" firstAttribute="top" secondItem="QoV-Ee-RE0" secondAttribute="bottom" constant="15" id="d6A-Dj-IBv"/>
                             <constraint firstItem="g86-vP-1Ph" firstAttribute="top" secondItem="L06-9P-OYI" secondAttribute="bottom" constant="100" id="dJf-gC-Wks"/>
+                            <constraint firstItem="L3N-8S-ZZd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fCE-wK-Alt"/>
                             <constraint firstItem="iG0-ta-li7" firstAttribute="top" secondItem="t2i-pu-Dlo" secondAttribute="bottom" id="h28-vj-Y6i"/>
                             <constraint firstItem="jYJ-LQ-eYW" firstAttribute="top" secondItem="t2i-pu-Dlo" secondAttribute="bottom" id="kuo-6c-BWw"/>
                             <constraint firstAttribute="height" secondItem="2CS-Jo-zKh" secondAttribute="height" id="lQp-jJ-soU"/>
@@ -270,6 +285,7 @@
                         <outlet property="counter" destination="00E-n9-Vb2" id="edz-lY-Uqq"/>
                         <outlet property="hiriganaLabel" destination="Fxa-mS-1YD" id="qiD-XJ-n40"/>
                         <outlet property="next" destination="L06-9P-OYI" id="3RA-HL-xGI"/>
+                        <outlet property="pairToggleButton" destination="L3N-8S-ZZd" id="r0F-Pl-cNr"/>
                         <outlet property="revealAnswerButton" destination="gz4-ce-kPn" id="JEc-Wk-f5M"/>
                         <outlet property="soundToggle" destination="Tho-v6-r7b" id="fUH-1D-dZL"/>
                         <outlet property="wrongButton" destination="Mwm-5E-y2E" id="zrb-Y2-FNd"/>
@@ -357,4 +373,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="AeB-Al-Mes"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

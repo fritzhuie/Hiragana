@@ -12,6 +12,7 @@
 		1FA4F80D1B0C0EDA002385EF /* nosound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80C1B0C0EDA002385EF /* nosound.png */; };
 		1FA4F80F1B0C0EE9002385EF /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80E1B0C0EE9002385EF /* sound.png */; };
 		1FA4F8141B0D1677002385EF /* welcomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4F8131B0D1677002385EF /* welcomePageViewController.m */; };
+		1FA4F8161B0DA370002385EF /* buttonStrikethrough.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F8151B0DA370002385EF /* buttonStrikethrough.png */; };
 		1FB860831ADDC42F002C25F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860821ADDC42F002C25F6 /* main.m */; };
 		1FB860861ADDC42F002C25F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860851ADDC42F002C25F6 /* AppDelegate.m */; };
 		1FB860891ADDC42F002C25F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB860881ADDC42F002C25F6 /* ViewController.m */; };
@@ -45,6 +46,7 @@
 		1FA4F80E1B0C0EE9002385EF /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
 		1FA4F8121B0D1677002385EF /* welcomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = welcomePageViewController.h; path = ../welcomePageViewController.h; sourceTree = "<group>"; };
 		1FA4F8131B0D1677002385EF /* welcomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = welcomePageViewController.m; path = ../welcomePageViewController.m; sourceTree = "<group>"; };
+		1FA4F8151B0DA370002385EF /* buttonStrikethrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonStrikethrough.png; sourceTree = "<group>"; };
 		1FB8607D1ADDC42F002C25F6 /* HiraganaDrills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaDrills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB860811ADDC42F002C25F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB860821ADDC42F002C25F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				1FA4F8071B070765002385EF /* kana */,
 				1FA4F80E1B0C0EE9002385EF /* sound.png */,
+				1FA4F8151B0DA370002385EF /* buttonStrikethrough.png */,
 				1FA4F80C1B0C0EDA002385EF /* nosound.png */,
 				1FB9E2341AE1DD810087014D /* card-back.png */,
 				1FB9E22F1AE1C61D0087014D /* table.png */,
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB860A71ADDC524002C25F6 /* Main.storyboard in Resources */,
+				1FA4F8161B0DA370002385EF /* buttonStrikethrough.png in Resources */,
 				1FB860911ADDC42F002C25F6 /* LaunchScreen.xib in Resources */,
 				1FB9E2301AE1C61D0087014D /* table.png in Resources */,
 				1FB9E2351AE1DD810087014D /* card-back.png in Resources */,
@@ -395,7 +399,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HiraganaDrills/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -407,7 +411,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HiraganaDrills/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
