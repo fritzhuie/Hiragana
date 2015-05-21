@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "hiriganaLibrary.h"
+#import "kanaLibrary.h"
 @import Foundation;
 
 @interface ViewController () <AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate>
@@ -35,13 +35,18 @@
 
 @end
 
+BOOL katakanaSelected;
 
 @implementation ViewController{
     NSString *currentDisplayed;
     int errorCount;
     bool answerRevealed;
     AppDelegate* delegate;
+    NSDictionary* kanaLibrary;
 }
+
++ (bool)katakanaSelected { return katakanaSelected; }
++ (void)setKatakana:(bool)setKatakana { katakanaSelected = setKatakana; }
 
 @synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage, soundToggle, revealAnswerButton;
 @synthesize counter;
@@ -52,10 +57,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self startDrill];
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
+    if (katakanaSelected){
+        kanaLibrary = KATAKANA_PAIR_DICT;
+        NSLog(@"katakana set");
+    }else{
+        kanaLibrary = HIRAGANA_PAIR_DICT;
+        NSLog(@"hirigana set");
+    }
+    [self startDrill];
 }
 
 - (void)showDefaultInterface{
@@ -119,22 +131,11 @@
 - (void)startDrill{
     [self showDrillInterface];
 
-    //disable or enable hirigana pairs
     errorCount = 0;
-    if (delegate.includePairs) {
-        _remaining = [NSMutableArray arrayWithArray:HIRAGANA_PAIR_DICT.allKeys];
-        [self sizeForPairs:TRUE];
-    }else{
-        _remaining = [NSMutableArray arrayWithArray:HIRAGANA_DICT.allKeys];
-        [self sizeForPairs:TRUE];
-    }
+    _remaining = [NSMutableArray arrayWithArray:kanaLibrary.allKeys];
 
     counter.text = [NSString stringWithFormat:@"%lu", (unsigned long)_remaining.count];
     [self showNewHirigana];
-}
-
-- (void)sizeForPairs:(BOOL)pairs {
-
 }
 
 - (void)showNewHirigana
@@ -185,7 +186,7 @@
 
     //TODO: Play kana sound
     if (delegate.sound) {
-        NSString* soundPath = [NSString stringWithFormat:@"kana/%@", HIRAGANA_PAIR_DICT[currentDisplayed]];
+        NSString* soundPath = [NSString stringWithFormat:@"kana/%@", kanaLibrary[currentDisplayed]];
         if(soundPath)
             NSLog(soundPath);
         else
@@ -221,8 +222,8 @@
 }
 
 - (NSString *) translate:(NSString *)key {
-    if ([HIRAGANA_PAIR_DICT objectForKey:key])
-        return [HIRAGANA_PAIR_DICT objectForKey:key];
+    if ([kanaLibrary objectForKey:key])
+        return [kanaLibrary objectForKey:key];
     else
         return @"error";
 }

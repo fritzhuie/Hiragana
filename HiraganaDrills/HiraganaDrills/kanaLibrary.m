@@ -1,4 +1,4 @@
-#import "hiriganaLibrary.h"
+#import "kanaLibrary.h"
 
 NSDictionary* HIRAGANA_PAIR_DICT;
 NSDictionary* HIRAGANA_DICT;

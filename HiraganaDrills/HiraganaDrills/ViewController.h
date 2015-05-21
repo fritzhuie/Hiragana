@@ -12,5 +12,7 @@
 
 @interface ViewController : UIViewController
 
++ (void)setKatakana:(bool)setKatakana;
+
 @end
 

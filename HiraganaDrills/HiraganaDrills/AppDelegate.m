@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "hiriganaLibrary.h"
+#import "kanaLibrary.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     self.includePairs = YES;
     self.sound = NO;
-    self.katakanaSelected = NO;
+    self.katakanaSelected = YES;
     initializePairDict();
     return YES;
 }

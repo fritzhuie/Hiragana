@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F00667C1AE83978009A1173 /* hiriganaLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F00667B1AE83978009A1173 /* hiriganaLibrary.m */; };
+		1F00667C1AE83978009A1173 /* kanaLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F00667B1AE83978009A1173 /* kanaLibrary.m */; };
 		1FA4F8081B070765002385EF /* kana in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F8071B070765002385EF /* kana */; };
 		1FA4F80D1B0C0EDA002385EF /* nosound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80C1B0C0EDA002385EF /* nosound.png */; };
 		1FA4F80F1B0C0EE9002385EF /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80E1B0C0EE9002385EF /* sound.png */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F00667A1AE8354D009A1173 /* hiriganaLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hiriganaLibrary.h; sourceTree = "<group>"; };
-		1F00667B1AE83978009A1173 /* hiriganaLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hiriganaLibrary.m; sourceTree = "<group>"; };
+		1F00667A1AE8354D009A1173 /* kanaLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kanaLibrary.h; sourceTree = "<group>"; };
+		1F00667B1AE83978009A1173 /* kanaLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kanaLibrary.m; sourceTree = "<group>"; };
 		1FA4F8071B070765002385EF /* kana */ = {isa = PBXFileReference; lastKnownFileType = folder; name = kana; path = ../kana; sourceTree = "<group>"; };
 		1FA4F80C1B0C0EDA002385EF /* nosound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosound.png; sourceTree = "<group>"; };
 		1FA4F80E1B0C0EE9002385EF /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 				1FB860851ADDC42F002C25F6 /* AppDelegate.m */,
 				1FB860871ADDC42F002C25F6 /* ViewController.h */,
 				1FB860881ADDC42F002C25F6 /* ViewController.m */,
-				1F00667A1AE8354D009A1173 /* hiriganaLibrary.h */,
-				1F00667B1AE83978009A1173 /* hiriganaLibrary.m */,
+				1F00667A1AE8354D009A1173 /* kanaLibrary.h */,
+				1F00667B1AE83978009A1173 /* kanaLibrary.m */,
 				1FB860B41AE172BB002C25F6 /* OptionsMenuViewController.m */,
 				1FB860B61AE172E6002C25F6 /* OptionsMenuViewController.h */,
 				1FB860A61ADDC524002C25F6 /* Main.storyboard */,
@@ -279,7 +279,7 @@
 				1FB860891ADDC42F002C25F6 /* ViewController.m in Sources */,
 				1FB860861ADDC42F002C25F6 /* AppDelegate.m in Sources */,
 				1FB860B51AE172BB002C25F6 /* OptionsMenuViewController.m in Sources */,
-				1F00667C1AE83978009A1173 /* hiriganaLibrary.m in Sources */,
+				1F00667C1AE83978009A1173 /* kanaLibrary.m in Sources */,
 				1FB860831ADDC42F002C25F6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,11 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Easy Hiragana Drills!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-9G-8VE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Simple Kana Drills!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-9G-8VE">
                                 <rect key="frame" x="-8" y="76" width="336" height="58"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKA-Xy-L3a">
+                                <rect key="frame" x="57" y="244" width="204" height="83"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <state key="normal" title="カタカナ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="katakanaSelected:" destination="xGL-Zd-XRX" eventType="touchUpInside" id="3VD-Qr-6Gj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kv-Pl-ice">
                                 <rect key="frame" x="57" y="142" width="197" height="86"/>
                                 <constraints>
@@ -30,25 +41,12 @@
                                     <constraint firstAttribute="width" constant="150" id="alt-Qm-YAi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
-                                <state key="normal" title="カタカナ">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="hiriganaPressed:" destination="xGL-Zd-XRX" eventType="touchUpInside" id="UcQ-Uo-fnk"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="katakanaSegue" modalTransitionStyle="flipHorizontal" id="FZN-iw-gPs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKA-Xy-L3a">
-                                <rect key="frame" x="57" y="244" width="204" height="83"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
                                 <state key="normal" title="ひらがな">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="katakanaPressed:" destination="xGL-Zd-XRX" eventType="touchUpInside" id="Gr6-Id-kNP"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="hiriganaSegue" modalTransitionStyle="flipHorizontal" id="gWW-7U-cpb"/>
+                                    <action selector="hiraganaSelected:" destination="xGL-Zd-XRX" eventType="touchUpInside" id="nOS-Fu-B0B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,13 +63,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="hiriganaPressed" destination="1kv-Pl-ice" id="YWW-EV-CvZ"/>
-                        <outlet property="katakanaPressed" destination="WKA-Xy-L3a" id="ZBp-6m-m6A"/>
+                        <outlet property="hiraganaButton" destination="1kv-Pl-ice" id="Wz8-Hv-NyX"/>
+                        <outlet property="katakanaButton" destination="WKA-Xy-L3a" id="sBg-Wn-G31"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="beginDrill" modalTransitionStyle="flipHorizontal" id="AeB-Al-Mes"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VW-VL-vfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-376" y="96"/>
+            <point key="canvasLocation" x="-346" y="96"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -356,6 +355,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gWW-7U-cpb"/>
+        <segue reference="AeB-Al-Mes"/>
     </inferredMetricsTieBreakers>
 </document>

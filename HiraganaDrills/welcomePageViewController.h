@@ -11,7 +11,7 @@
 
 
 @interface welcomePageViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *hiriganaPressed;
-@property (weak, nonatomic) IBOutlet UIButton *katakanaPressed;
+@property (weak, nonatomic) IBOutlet UIButton *hiraganaButton;
+@property (weak, nonatomic) IBOutlet UIButton *katakanaButton;
 
 @end

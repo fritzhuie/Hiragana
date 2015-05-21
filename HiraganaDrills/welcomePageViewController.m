@@ -7,31 +7,29 @@
 //
 
 #import "welcomePageViewController.h"
-#import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface welcomePageViewController ()
 
 @end
 
 @implementation welcomePageViewController{
-    AppDelegate* delegate;
 }
 
-@synthesize hiriganaPressed;
-@synthesize katakanaPressed;
+@synthesize hiraganaButton;
+@synthesize katakanaButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
 }
-- (IBAction)hiriganaPressed:(id)sender {
-    delegate.katakanaSelected = NO;
-    NSLog(@"hirigana set");
+- (IBAction)hiraganaSelected:(id)sender {
+    [ViewController setKatakana:NO];
+    [self performSegueWithIdentifier:@"beginDrill" sender:self];
 }
-- (IBAction)katakanaPressed:(id)sender {
-    delegate.katakanaSelected = YES;
-    NSLog(@"katakana set");
-
+- (IBAction)katakanaSelected:(id)sender {
+    [ViewController setKatakana:YES];
+    [self performSegueWithIdentifier:@"beginDrill" sender:self];
 }
 
 @end
