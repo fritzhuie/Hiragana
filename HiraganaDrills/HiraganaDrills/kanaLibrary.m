@@ -4,6 +4,7 @@ NSDictionary* HIRAGANA_PAIR_DICT;
 NSDictionary* HIRAGANA_DICT;
 NSDictionary* KATAKANA_PAIR_DICT;
 NSDictionary* KATAKANA_DICT;
+NSDictionary* HIRAGANA_WORD_DICT;
 
 
 void initializePairDict() {
@@ -110,4 +111,8 @@ void initializePairDict() {
        @"ヤ": @"ya", @"ユ": @"yu", @"ヨ": @"yo", @"ン": @"n",
        @"ワ": @"wa", @"ヰ": @"wi", @"ヱ": @"we", @"ヲ": @"wo"
        };
+
+    HIRAGANA_WORD_DICT = @{
+        @"ぁりがとう": @"Arigato", @"くださえ" : @"kudasai"
+                           };
 }
