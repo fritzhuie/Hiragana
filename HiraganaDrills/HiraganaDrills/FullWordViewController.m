@@ -31,11 +31,29 @@
 
 - (IBAction)newWordButtonPressed:(id)sender {
     currentWord = wordList[0];
-    kanaWordLabel.text = currentWord;
+    kanaWordLabel.text = [currentWord stringByReplacingOccurrencesOfString:@"/" withString:@""];
+}
+
+- (NSString *)returnCharacterInTapBoundary:(CGPoint)location{
+    int wordLength = (int)(([currentWord length]/2)+1);
+    NSLog(@"%i", wordLength);
+    float boxWidth =  320.0 / wordLength;
+
+    int i = 0;
+    while(i < wordLength){
+        if (location.x < ((i+1)*boxWidth)){
+            NSArray* a = [currentWord componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"/"]];
+            //NSLog(@"Numer in array: %i | #%i | %@", wordLength, i, a[i]);
+            return a[i];
+        }
+        i++;
+    }
+    return nil;
 }
 
 - (IBAction)tapDetected:(id)sender {
     NSLog(@"X:%f Y:%f", [tapGestureRecogniser locationInView:wordView].x, [tapGestureRecogniser locationInView:wordView].y);
+    NSString* a = [self returnCharacterInTapBoundary:[tapGestureRecogniser locationInView:wordView]];
 }
 
 - (void)didReceiveMemoryWarning {
