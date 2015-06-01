@@ -317,14 +317,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PtN-re-6bd">
-                                <rect key="frame" x="16" y="74" width="288" height="151"/>
+                                <rect key="frame" x="0.0" y="74" width="300" height="151"/>
                                 <color key="backgroundColor" red="0.88747643752445282" green="1" blue="0.99780099531960587" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="151" id="YKf-cO-Hkq"/>
+                                    <constraint firstAttribute="height" constant="150" id="YKf-cO-Hkq"/>
+                                    <constraint firstAttribute="width" constant="320" id="u9v-JP-VGt"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="1v4-Cv-6RG" appends="YES" id="C9i-9U-5lh"/>
@@ -359,7 +360,6 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="PtN-re-6bd" secondAttribute="centerX" id="TEP-FF-qA9"/>
-                            <constraint firstAttribute="width" secondItem="PtN-re-6bd" secondAttribute="width" id="apx-g3-PzZ"/>
                             <constraint firstItem="bb0-Re-euf" firstAttribute="centerY" secondItem="PtN-re-6bd" secondAttribute="centerY" id="k0u-H6-gWm"/>
                             <constraint firstItem="bb0-Re-euf" firstAttribute="height" secondItem="PtN-re-6bd" secondAttribute="height" id="l4Q-Lx-nYH"/>
                             <constraint firstItem="PtN-re-6bd" firstAttribute="top" secondItem="FG5-ui-2To" secondAttribute="bottom" constant="54" id="mhc-MK-sBi"/>
