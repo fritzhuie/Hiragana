@@ -65,7 +65,7 @@
             }i++;}
         NSLog([self translate:selectedKana]);
         CGRect tapBoxRect = CGRectMake(50, 50, 50, 50);
-        [self playAnswerAnimationForWord:[self translate:selectedKana] WithBounds:tapBoxRect];
+        kanaWordLabel.text = [[currentWord stringByReplacingOccurrencesOfString:a[i] withString:[self translate:selectedKana]] stringByReplacingOccurrencesOfString:@"/" withString:@""];
     }
 
     /*
