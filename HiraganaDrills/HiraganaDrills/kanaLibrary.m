@@ -113,6 +113,6 @@ void initializePairDict() {
        };
 
     HIRAGANA_WORD_DICT = @{
-        @"ぁ/り/が/と/う": @"Arigato", @"くださえ" : @"kudasai"
+        @"ぁ/り/が/と/う": @"Arigato", @"く/だ/さ/え" : @"kudasai"
                            };
 }

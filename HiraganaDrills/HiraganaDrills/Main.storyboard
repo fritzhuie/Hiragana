@@ -394,7 +394,6 @@
         <!--GLKit View Controller-->
         <scene sceneID="a2t-g3-Fa2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cyj-Gy-LFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <glkViewController preferredFramesPerSecond="30" id="q32-Ji-M2J" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rtQ-cX-suh"/>
@@ -408,6 +407,7 @@
                         </connections>
                     </glkView>
                 </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyj-Gy-LFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-62.5" y="818"/>
         </scene>

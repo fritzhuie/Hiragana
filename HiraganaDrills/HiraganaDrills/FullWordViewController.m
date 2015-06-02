@@ -40,7 +40,7 @@
 }
 
 - (IBAction)newWordButtonPressed:(id)sender {
-    currentWord = wordList[0];
+    currentWord = wordList[1];
     kanaWordLabel.text = [currentWord stringByReplacingOccurrencesOfString:@"/" withString:@""];
 }
 
@@ -54,7 +54,7 @@
 - (void)showAnswerForKanaAt:(CGPoint)location{
     if ([wordList containsObject:currentWord]) {
         NSArray* a = [currentWord componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"/"]];
-        CGFloat wordLength = ([currentWord length]/2)+1;
+        CGFloat wordLength = ([currentWord length]/2)+((int)[currentWord length]% (int)2.0f);
         CGFloat boxWidth =  320.0 / wordLength;
         NSString* selectedKana;
         int i = 0;
@@ -63,8 +63,6 @@
                 selectedKana = a[i];
                 break;
             }i++;}
-        NSLog([self translate:selectedKana]);
-        CGRect tapBoxRect = CGRectMake(50, 50, 50, 50);
         kanaWordLabel.text = [[currentWord stringByReplacingOccurrencesOfString:a[i] withString:[self translate:selectedKana]] stringByReplacingOccurrencesOfString:@"/" withString:@""];
     }
 
