@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.includePairs = YES;
-    self.sound = NO;
+    self.sound = NO; //sound disabled until I can import a full sound library - set to test current sound library
     self.katakanaSelected = YES;
     initializePairDict();
     return YES;

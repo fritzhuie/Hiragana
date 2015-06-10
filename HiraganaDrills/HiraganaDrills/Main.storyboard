@@ -50,8 +50,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUw-xQ-ssn">
-                                <rect key="frame" x="215" y="507" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="172" y="505" width="93" height="30"/>
+                                <state key="normal" title="Full word test">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -332,8 +332,8 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJG-m1-oMd">
-                                <rect key="frame" x="16" y="10" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="16" y="10" width="35" height="30"/>
+                                <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -390,26 +390,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-454" y="823"/>
-        </scene>
-        <!--GLKit View Controller-->
-        <scene sceneID="a2t-g3-Fa2">
-            <objects>
-                <glkViewController preferredFramesPerSecond="30" id="q32-Ji-M2J" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rtQ-cX-suh"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Fp-hP-nSb"/>
-                    </layoutGuides>
-                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="0rA-v0-LW0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <connections>
-                            <outlet property="delegate" destination="q32-Ji-M2J" id="1gq-Ce-rkj"/>
-                        </connections>
-                    </glkView>
-                </glkViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cyj-Gy-LFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-62.5" y="818"/>
         </scene>
         <!--Options Menu View Controller-->
         <scene sceneID="nep-Wx-RD0">
@@ -487,8 +467,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="8RE-3A-eSx"/>
         <segue reference="OeL-6T-Ge5"/>
-        <segue reference="AeB-Al-Mes"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

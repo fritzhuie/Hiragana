@@ -196,7 +196,6 @@ BOOL katakanaSelected;
     answerLabel.text = displayAnswer;
     answerLabel.hidden = NO;
 
-    //TODO: Play kana sound
     if (delegate.sound) {
         NSString* soundPath = [NSString stringWithFormat:@"kana/%@", kanaLibrary[currentDisplayed]];
         if(soundPath)
@@ -218,7 +217,6 @@ BOOL katakanaSelected;
             }
             else{
                 //pre-load the audio into the buffer
-                // may avoid, as it's not always possible to pre-load the audio.
                 [soundPlayer prepareToPlay];
                 [soundPlayer play];
             }
@@ -230,7 +228,6 @@ BOOL katakanaSelected;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (NSString *) translate:(NSString *)key {
