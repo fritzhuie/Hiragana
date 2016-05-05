@@ -90,11 +90,12 @@ BOOL katakanaSelected;
     next.hidden = NO;
     counter.hidden = NO;
     allDoneLabel.hidden = YES;
-    wrongButton.hidden = NO;
+    wrongButton.hidden = YES;
     cardBackImage.hidden = NO;
     soundToggle.hidden = SOUND_TOGGLE_DIABLED;
-    revealAnswerButton.hidden = YES;
+    revealAnswerButton.hidden = NO;
 }
+
 
 - (void)showCompletedInterface {
     [self showDefaultInterface];
@@ -181,10 +182,17 @@ BOOL katakanaSelected;
     }
 }
 
+- (IBAction)kanaTapped:(id)sender {
+    [self revealAnswer];
+    revealAnswerButton.hidden = YES;
+    wrongButton.hidden = NO;
+}
+
 - (IBAction)revealAnswerButtonPressed:(id)sender
 {
     [self revealAnswer];
     revealAnswerButton.hidden = YES;
+    wrongButton.hidden = NO;
 }
 
 - (IBAction)help:(id)sender {

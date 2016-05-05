@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xGL-Zd-XRX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xGL-Zd-XRX">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Simple Kana Drills!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-9G-8VE">
                                 <rect key="frame" x="-8" y="76" width="336" height="58"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKA-Xy-L3a">
@@ -49,25 +49,32 @@
                                     <action selector="hiraganaSelected:" destination="xGL-Zd-XRX" eventType="touchUpInside" id="nOS-Fu-B0B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUw-xQ-ssn">
-                                <rect key="frame" x="172" y="505" width="93" height="30"/>
-                                <state key="normal" title="Full word test">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="MRt-xh-8jh" kind="modal" modalTransitionStyle="flipHorizontal" id="fWg-1Z-xfq"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hirigana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-8T-boE">
+                                <rect key="frame" x="106" y="385" width="95" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Katakana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoL-hN-hac">
+                                <rect key="frame" x="108" y="414" width="95" height="22"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CmW-9G-8VE" firstAttribute="top" secondItem="aRS-Xu-DTz" secondAttribute="bottom" constant="120" id="22o-dn-JPt"/>
+                            <constraint firstItem="qoL-hN-hac" firstAttribute="top" secondItem="WKA-Xy-L3a" secondAttribute="bottom" constant="-8" id="2hb-6J-GvC"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="top" secondItem="CmW-9G-8VE" secondAttribute="bottom" constant="100" id="4vz-Dq-xQn"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="width" secondItem="WKA-Xy-L3a" secondAttribute="width" id="59m-Uo-4VB"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="height" secondItem="WKA-Xy-L3a" secondAttribute="height" id="754-62-t59"/>
                             <constraint firstAttribute="centerX" secondItem="WKA-Xy-L3a" secondAttribute="centerX" id="BdF-Au-hGI"/>
                             <constraint firstAttribute="centerX" secondItem="CmW-9G-8VE" secondAttribute="centerX" id="EBu-Fp-pVE"/>
-                            <constraint firstItem="WKA-Xy-L3a" firstAttribute="top" secondItem="1kv-Pl-ice" secondAttribute="bottom" constant="55" id="WQO-U3-zI3"/>
+                            <constraint firstItem="CzM-8T-boE" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="MKZ-cO-jeC"/>
+                            <constraint firstItem="qoL-hN-hac" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="UWL-EP-zrK"/>
+                            <constraint firstItem="WKA-Xy-L3a" firstAttribute="top" secondItem="1kv-Pl-ice" secondAttribute="bottom" constant="40" id="WQO-U3-zI3"/>
+                            <constraint firstItem="CzM-8T-boE" firstAttribute="top" secondItem="1kv-Pl-ice" secondAttribute="bottom" constant="-8" id="dte-HB-Pgz"/>
                             <constraint firstAttribute="centerX" secondItem="1kv-Pl-ice" secondAttribute="centerX" id="hcd-wT-Pxo"/>
                         </constraints>
                     </view>
@@ -106,7 +113,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="card-back.png" translatesAutoresizingMaskIntoConstraints="NO" id="QoV-Ee-RE0">
                                 <rect key="frame" x="6" y="58" width="307" height="203"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Cay-ro-Rof"/>
@@ -226,7 +233,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-ta-li7">
                                 <rect key="frame" x="16" y="11" width="93" height="30"/>
-                                <state key="normal" title="Change Kana">
+                                <state key="normal" title="Back">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -247,12 +254,19 @@
                                     <action selector="pairTogglePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDq-ca-27A"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-qe-705">
+                                <rect key="frame" x="109" y="11" width="111" height="72"/>
+                                <connections>
+                                    <action selector="kanaTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPg-KS-exR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="dQo-9z-Xn3" secondAttribute="centerX" id="1SN-gC-02H"/>
                             <constraint firstAttribute="centerX" secondItem="Mwm-5E-y2E" secondAttribute="centerX" constant="-75" id="47H-03-i4h"/>
                             <constraint firstAttribute="centerX" secondItem="Fxa-mS-1YD" secondAttribute="centerX" id="4Qc-Ch-F1D"/>
+                            <constraint firstItem="ACv-qe-705" firstAttribute="width" secondItem="QoV-Ee-RE0" secondAttribute="width" id="5Qb-l4-mV0"/>
                             <constraint firstAttribute="centerY" secondItem="2CS-Jo-zKh" secondAttribute="centerY" id="7jy-eK-uui"/>
                             <constraint firstAttribute="width" secondItem="2CS-Jo-zKh" secondAttribute="width" id="8nA-Jx-lN2"/>
                             <constraint firstItem="QoV-Ee-RE0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="58" id="99a-mJ-1DS"/>
@@ -264,6 +278,7 @@
                             <constraint firstItem="g86-vP-1Ph" firstAttribute="top" secondItem="L3N-8S-ZZd" secondAttribute="bottom" constant="10" id="EXy-yz-Bb2"/>
                             <constraint firstAttribute="centerX" secondItem="L06-9P-OYI" secondAttribute="centerX" constant="75" id="Fbc-Ph-x04"/>
                             <constraint firstAttribute="centerX" secondItem="gz4-ce-kPn" secondAttribute="centerX" constant="-75" id="OGi-Wz-k7e"/>
+                            <constraint firstItem="ACv-qe-705" firstAttribute="height" secondItem="QoV-Ee-RE0" secondAttribute="height" id="U1d-hh-miU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tho-v6-r7b" secondAttribute="trailing" constant="50" id="Y4U-3E-0Dg"/>
                             <constraint firstItem="g86-vP-1Ph" firstAttribute="top" secondItem="Tho-v6-r7b" secondAttribute="bottom" constant="20" id="ZVb-71-oTN"/>
                             <constraint firstItem="00E-n9-Vb2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="67" id="aQj-7w-Euh"/>
@@ -320,7 +335,7 @@
                                 <rect key="frame" x="0.0" y="74" width="300" height="151"/>
                                 <color key="backgroundColor" red="0.88747643752445282" green="1" blue="0.99780099531960587" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" button="YES"/>
+                                    <accessibilityTraits key="traits" button="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -461,14 +476,9 @@
     <resources>
         <image name="card-back.png" width="600" height="337"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8RE-3A-eSx"/>
-        <segue reference="OeL-6T-Ge5"/>
+        <segue reference="xJs-F3-kCv"/>
+        <segue reference="AeB-Al-Mes"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
