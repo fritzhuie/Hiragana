@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xGL-Zd-XRX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xGL-Zd-XRX">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Simple Kana Drills!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-9G-8VE">
-                                <rect key="frame" x="-8" y="76" width="336" height="58"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <rect key="frame" x="-8" y="69" width="348" height="58"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKA-Xy-L3a">
-                                <rect key="frame" x="57" y="244" width="204" height="83"/>
+                                <rect key="frame" x="53" y="428" width="204" height="83"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
                                 <state key="normal" title="カタカナ">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.70196078431372544" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -35,14 +35,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kv-Pl-ice">
-                                <rect key="frame" x="57" y="142" width="197" height="86"/>
+                                <rect key="frame" x="57" y="386" width="197" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YD6-nk-QSe"/>
                                     <constraint firstAttribute="width" constant="150" id="alt-Qm-YAi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
                                 <state key="normal" title="ひらがな">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.75996291035353536" green="0.0" blue="0.084169416146484585" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -50,32 +50,121 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hirigana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-8T-boE">
-                                <rect key="frame" x="106" y="385" width="95" height="21"/>
+                                <rect key="frame" x="104" y="490" width="95" height="21"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Katakana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoL-hN-hac">
-                                <rect key="frame" x="108" y="414" width="95" height="22"/>
+                                <rect key="frame" x="108" y="519" width="95" height="22"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1. Choose kana to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFK-wC-e19">
+                                <rect key="frame" x="60" y="130" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="If you know the kana (skip)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kD9-Kr-ILQ">
+                                <rect key="frame" x="70" y="209" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="If you didn't know it (recycle)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0az-SW-ere">
+                                <rect key="frame" x="70" y="303" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2. Pronouce each kana out loud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIz-0b-toS">
+                                <rect key="frame" x="23" y="159" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="✔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-Lt-zXR">
+                                <rect key="frame" x="20" y="200" width="41" height="39"/>
+                                <color key="backgroundColor" red="0.83529411764705885" green="0.94901960784313721" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Jap-Sd-2gp"/>
+                                    <constraint firstAttribute="height" constant="40" id="hpd-Fe-3bx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH3-ch-8VX">
+                                <rect key="frame" x="20" y="247" width="41" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.99607843137254903" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="OCc-nB-Hh9"/>
+                                    <constraint firstAttribute="height" constant="40" id="aIO-rl-2CA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="✗" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-m2-sM7">
+                                <rect key="frame" x="20" y="294" width="41" height="39"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.8901960784313725" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Fw7-Sa-8Eu"/>
+                                    <constraint firstAttribute="height" constant="40" id="ugg-Wx-xvN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select to continue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glh-WV-Krp">
+                                <rect key="frame" x="28" y="357" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="For a hint (reveal)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POf-po-1mC">
+                                <rect key="frame" x="70" y="256" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CmW-9G-8VE" firstAttribute="top" secondItem="aRS-Xu-DTz" secondAttribute="bottom" constant="120" id="22o-dn-JPt"/>
+                            <constraint firstItem="TIz-0b-toS" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="1jz-KI-y7q"/>
+                            <constraint firstItem="CmW-9G-8VE" firstAttribute="top" secondItem="aRS-Xu-DTz" secondAttribute="bottom" constant="50" id="22o-dn-JPt"/>
+                            <constraint firstItem="kD9-Kr-ILQ" firstAttribute="leading" secondItem="tWB-Lt-zXR" secondAttribute="trailing" constant="9" id="2K4-v5-3IU"/>
+                            <constraint firstItem="yFK-wC-e19" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="2Wb-Oe-iG5"/>
                             <constraint firstItem="qoL-hN-hac" firstAttribute="top" secondItem="WKA-Xy-L3a" secondAttribute="bottom" constant="-8" id="2hb-6J-GvC"/>
-                            <constraint firstItem="1kv-Pl-ice" firstAttribute="top" secondItem="CmW-9G-8VE" secondAttribute="bottom" constant="100" id="4vz-Dq-xQn"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="width" secondItem="WKA-Xy-L3a" secondAttribute="width" id="59m-Uo-4VB"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="height" secondItem="WKA-Xy-L3a" secondAttribute="height" id="754-62-t59"/>
+                            <constraint firstItem="tWB-Lt-zXR" firstAttribute="top" secondItem="TIz-0b-toS" secondAttribute="bottom" constant="20" id="7J5-ak-KDW"/>
                             <constraint firstAttribute="centerX" secondItem="WKA-Xy-L3a" secondAttribute="centerX" id="BdF-Au-hGI"/>
                             <constraint firstAttribute="centerX" secondItem="CmW-9G-8VE" secondAttribute="centerX" id="EBu-Fp-pVE"/>
+                            <constraint firstItem="0az-SW-ere" firstAttribute="leading" secondItem="aAh-m2-sM7" secondAttribute="trailing" constant="9" id="I6m-8y-qHm"/>
+                            <constraint firstItem="1kv-Pl-ice" firstAttribute="top" secondItem="0az-SW-ere" secondAttribute="bottom" constant="50" id="MAp-UH-6qi"/>
                             <constraint firstItem="CzM-8T-boE" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="MKZ-cO-jeC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MH3-ch-8VX" secondAttribute="leading" id="Mwf-J3-2ke"/>
                             <constraint firstItem="qoL-hN-hac" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="UWL-EP-zrK"/>
-                            <constraint firstItem="WKA-Xy-L3a" firstAttribute="top" secondItem="1kv-Pl-ice" secondAttribute="bottom" constant="40" id="WQO-U3-zI3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MH3-ch-8VX" secondAttribute="leading" id="Vac-9H-iIh"/>
+                            <constraint firstItem="WKA-Xy-L3a" firstAttribute="top" secondItem="1kv-Pl-ice" secondAttribute="bottom" constant="18" id="WQO-U3-zI3"/>
+                            <constraint firstItem="aAh-m2-sM7" firstAttribute="top" secondItem="MH3-ch-8VX" secondAttribute="bottom" constant="8" id="Wdu-o5-m6U"/>
+                            <constraint firstItem="yFK-wC-e19" firstAttribute="top" secondItem="CmW-9G-8VE" secondAttribute="bottom" constant="10" id="Wy9-T4-VJd"/>
+                            <constraint firstItem="0az-SW-ere" firstAttribute="centerY" secondItem="aAh-m2-sM7" secondAttribute="centerY" id="Xji-lP-rFe"/>
+                            <constraint firstItem="Glh-WV-Krp" firstAttribute="top" secondItem="0az-SW-ere" secondAttribute="bottom" constant="20" id="YTV-II-lmh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aAh-m2-sM7" secondAttribute="leading" id="dBO-ms-S6M"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="tWB-Lt-zXR" secondAttribute="leading" id="dTL-et-Le4"/>
+                            <constraint firstItem="kD9-Kr-ILQ" firstAttribute="centerY" secondItem="tWB-Lt-zXR" secondAttribute="centerY" id="dZy-DB-CNi"/>
                             <constraint firstItem="CzM-8T-boE" firstAttribute="top" secondItem="1kv-Pl-ice" secondAttribute="bottom" constant="-8" id="dte-HB-Pgz"/>
+                            <constraint firstItem="CmW-9G-8VE" firstAttribute="width" secondItem="8L0-Cx-lec" secondAttribute="width" id="e21-yS-A9Q"/>
+                            <constraint firstItem="POf-po-1mC" firstAttribute="centerY" secondItem="MH3-ch-8VX" secondAttribute="centerY" id="eBd-eA-eTN"/>
+                            <constraint firstItem="TIz-0b-toS" firstAttribute="top" secondItem="yFK-wC-e19" secondAttribute="bottom" constant="8" id="fui-J7-NEg"/>
                             <constraint firstAttribute="centerX" secondItem="1kv-Pl-ice" secondAttribute="centerX" id="hcd-wT-Pxo"/>
+                            <constraint firstItem="POf-po-1mC" firstAttribute="leading" secondItem="MH3-ch-8VX" secondAttribute="trailing" constant="9" id="jJ9-fJ-h23"/>
+                            <constraint firstItem="MH3-ch-8VX" firstAttribute="top" secondItem="tWB-Lt-zXR" secondAttribute="bottom" constant="8" id="keH-AV-qao"/>
+                            <constraint firstItem="Glh-WV-Krp" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="miD-rz-Cic"/>
                         </constraints>
                     </view>
                     <connections>
