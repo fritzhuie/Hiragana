@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1F00667C1AE83978009A1173 /* kanaLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F00667B1AE83978009A1173 /* kanaLibrary.m */; };
+		1F370BBA1E9B59E50030556E /* restart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F370BB91E9B59E50030556E /* restart.png */; };
+		1F370BBC1E9B5AB10030556E /* backarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F370BBB1E9B5AB10030556E /* backarrow.png */; };
+		1F370BCC1EA202BF0030556E /* hirasheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F370BC81EA202BF0030556E /* hirasheet.png */; };
+		1F370BCD1EA202BF0030556E /* hirasheettenten.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F370BC91EA202BF0030556E /* hirasheettenten.png */; };
+		1F370BCE1EA202BF0030556E /* kanasheettenten.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F370BCA1EA202BF0030556E /* kanasheettenten.png */; };
+		1F370BCF1EA202BF0030556E /* katasheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F370BCB1EA202BF0030556E /* katasheet.png */; };
+		1F370BD31EA204210030556E /* CheatSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F370BD21EA204210030556E /* CheatSheetViewController.m */; };
 		1FA4F8081B070765002385EF /* kana in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F8071B070765002385EF /* kana */; };
 		1FA4F80D1B0C0EDA002385EF /* nosound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80C1B0C0EDA002385EF /* nosound.png */; };
 		1FA4F80F1B0C0EE9002385EF /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4F80E1B0C0EE9002385EF /* sound.png */; };
@@ -42,6 +49,14 @@
 /* Begin PBXFileReference section */
 		1F00667A1AE8354D009A1173 /* kanaLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kanaLibrary.h; sourceTree = "<group>"; };
 		1F00667B1AE83978009A1173 /* kanaLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kanaLibrary.m; sourceTree = "<group>"; };
+		1F370BB91E9B59E50030556E /* restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restart.png; sourceTree = "<group>"; };
+		1F370BBB1E9B5AB10030556E /* backarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backarrow.png; sourceTree = "<group>"; };
+		1F370BC81EA202BF0030556E /* hirasheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hirasheet.png; sourceTree = "<group>"; };
+		1F370BC91EA202BF0030556E /* hirasheettenten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hirasheettenten.png; sourceTree = "<group>"; };
+		1F370BCA1EA202BF0030556E /* kanasheettenten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanasheettenten.png; sourceTree = "<group>"; };
+		1F370BCB1EA202BF0030556E /* katasheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = katasheet.png; sourceTree = "<group>"; };
+		1F370BD21EA204210030556E /* CheatSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheatSheetViewController.m; sourceTree = "<group>"; };
+		1F370BD41EA204470030556E /* CheatSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheatSheetViewController.h; sourceTree = "<group>"; };
 		1FA4F8071B070765002385EF /* kana */ = {isa = PBXFileReference; lastKnownFileType = folder; name = kana; path = ../kana; sourceTree = "<group>"; };
 		1FA4F80C1B0C0EDA002385EF /* nosound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosound.png; sourceTree = "<group>"; };
 		1FA4F80E1B0C0EE9002385EF /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
@@ -118,6 +133,8 @@
 				1FB860871ADDC42F002C25F6 /* ViewController.h */,
 				1FB860881ADDC42F002C25F6 /* ViewController.m */,
 				1FB532F61B14BB2700A708B6 /* FullWordViewController.h */,
+				1F370BD21EA204210030556E /* CheatSheetViewController.m */,
+				1F370BD41EA204470030556E /* CheatSheetViewController.h */,
 				1FB532F71B14BB2700A708B6 /* FullWordViewController.m */,
 				1F00667A1AE8354D009A1173 /* kanaLibrary.h */,
 				1F00667B1AE83978009A1173 /* kanaLibrary.m */,
@@ -163,6 +180,12 @@
 			children = (
 				1FA4F8071B070765002385EF /* kana */,
 				1FA4F80E1B0C0EE9002385EF /* sound.png */,
+				1F370BC81EA202BF0030556E /* hirasheet.png */,
+				1F370BC91EA202BF0030556E /* hirasheettenten.png */,
+				1F370BCA1EA202BF0030556E /* kanasheettenten.png */,
+				1F370BCB1EA202BF0030556E /* katasheet.png */,
+				1F370BB91E9B59E50030556E /* restart.png */,
+				1F370BBB1E9B5AB10030556E /* backarrow.png */,
 				1FA4F8151B0DA370002385EF /* buttonStrikethrough.png */,
 				1FA4F80C1B0C0EDA002385EF /* nosound.png */,
 				1FB9E2341AE1DD810087014D /* card-back.png */,
@@ -224,6 +247,7 @@
 					1FB8607C1ADDC42F002C25F6 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = ZMVW3AW7K7;
+						LastSwiftMigration = 0820;
 					};
 					1FB860951ADDC430002C25F6 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -255,17 +279,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F370BCC1EA202BF0030556E /* hirasheet.png in Resources */,
+				1F370BCD1EA202BF0030556E /* hirasheettenten.png in Resources */,
 				1FB860A71ADDC524002C25F6 /* Main.storyboard in Resources */,
 				1FA4F8161B0DA370002385EF /* buttonStrikethrough.png in Resources */,
 				1FB860911ADDC42F002C25F6 /* LaunchScreen.xib in Resources */,
 				1FB9E2301AE1C61D0087014D /* table.png in Resources */,
+				1F370BBA1E9B59E50030556E /* restart.png in Resources */,
+				1F370BCE1EA202BF0030556E /* kanasheettenten.png in Resources */,
 				1FB9E2351AE1DD810087014D /* card-back.png in Resources */,
 				1FA4F80D1B0C0EDA002385EF /* nosound.png in Resources */,
+				1F370BCF1EA202BF0030556E /* katasheet.png in Resources */,
 				1FB9E2371AE1E2030087014D /* icon.png in Resources */,
 				1FB8608E1ADDC42F002C25F6 /* Images.xcassets in Resources */,
 				1FB9E2291AE18D020087014D /* cog.png in Resources */,
 				1FB9E22E1AE1C50D0087014D /* list-icon.png in Resources */,
 				1FA4F8081B070765002385EF /* kana in Resources */,
+				1F370BBC1E9B5AB10030556E /* backarrow.png in Resources */,
 				1FA4F80F1B0C0EE9002385EF /* sound.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +316,7 @@
 			files = (
 				1FB532F81B14BB2700A708B6 /* FullWordViewController.m in Sources */,
 				1FA4F8141B0D1677002385EF /* welcomePageViewController.m in Sources */,
+				1F370BD31EA204210030556E /* CheatSheetViewController.m in Sources */,
 				1FB860891ADDC42F002C25F6 /* ViewController.m in Sources */,
 				1FB860861ADDC42F002C25F6 /* AppDelegate.m in Sources */,
 				1FB860B51AE172BB002C25F6 /* OptionsMenuViewController.m in Sources */,
@@ -405,12 +436,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HiraganaDrills/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fritzhuie.hiraganaDrills;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -420,12 +454,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HiraganaDrills/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fritzhuie.hiraganaDrills;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
