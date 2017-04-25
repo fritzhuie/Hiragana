@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="xGL-Zd-XRX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="xGL-Zd-XRX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -62,7 +62,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Kana Drills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdk-se-2Az">
                                 <rect key="frame" x="4" y="50" width="338" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -79,13 +79,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose an alphabet to practice:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfF-fp-jCq">
-                                <rect key="frame" x="137" y="358" width="244" height="21"/>
+                                <rect key="frame" x="71" y="349" width="244" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thw-Nt-sBX">
-                                <rect key="frame" x="141" y="134" width="65" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thw-Nt-sBX">
+                                <rect key="frame" x="279" y="587" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="25e-hz-xdO"/>
                                     <constraint firstAttribute="width" constant="60" id="xcq-WW-i5d"/>
@@ -95,34 +95,26 @@
                                     <segue destination="Usa-wn-08L" kind="modal" animates="NO" id="2jL-Oi-8ku"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cheat sheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpk-PM-Ma2">
-                                <rect key="frame" x="152" y="207" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="leading" secondItem="8L0-Cx-lec" secondAttribute="leadingMargin" id="52E-Za-43T"/>
-                            <constraint firstItem="7V5-7q-NiM" firstAttribute="top" secondItem="WKA-Xy-L3a" secondAttribute="bottom" constant="35" id="5yC-He-cKA"/>
                             <constraint firstItem="Bdk-se-2Az" firstAttribute="width" secondItem="8L0-Cx-lec" secondAttribute="width" id="6VI-mq-FDK"/>
                             <constraint firstItem="SOq-ss-YyY" firstAttribute="centerX" secondItem="1kv-Pl-ice" secondAttribute="centerX" id="8hN-Jk-g2G"/>
-                            <constraint firstItem="7V5-7q-NiM" firstAttribute="top" secondItem="1kv-Pl-ice" secondAttribute="bottom" constant="35" id="AOH-xU-hh4"/>
-                            <constraint firstItem="Dpk-PM-Ma2" firstAttribute="top" secondItem="thw-Nt-sBX" secondAttribute="bottom" constant="8" id="EGc-V1-X8g"/>
+                            <constraint firstItem="7V5-7q-NiM" firstAttribute="top" secondItem="thw-Nt-sBX" secondAttribute="bottom" constant="20" id="DMB-Mg-eLR"/>
                             <constraint firstItem="WKA-Xy-L3a" firstAttribute="width" secondItem="8L0-Cx-lec" secondAttribute="width" multiplier="0.45" id="Jkd-Em-s4x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="thw-Nt-sBX" secondAttribute="trailing" constant="20" id="Oaf-j7-PxE"/>
                             <constraint firstItem="Bdk-se-2Az" firstAttribute="centerY" secondItem="8L0-Cx-lec" secondAttribute="centerY" constant="-200" id="PKD-kd-aS4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WKA-Xy-L3a" secondAttribute="trailing" id="QDm-sx-c87"/>
                             <constraint firstItem="Bdk-se-2Az" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="QcT-VV-hmO"/>
-                            <constraint firstItem="thw-Nt-sBX" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="S3g-w1-Gox"/>
                             <constraint firstItem="WKA-Xy-L3a" firstAttribute="top" secondItem="CfF-fp-jCq" secondAttribute="bottom" constant="40" id="Soc-G5-7ST"/>
                             <constraint firstItem="WKA-Xy-L3a" firstAttribute="height" secondItem="8L0-Cx-lec" secondAttribute="height" multiplier="0.25" id="YOa-Gx-tNc"/>
                             <constraint firstItem="WKA-Xy-L3a" firstAttribute="top" secondItem="QSB-Ww-s1U" secondAttribute="bottom" constant="8" id="b1b-xw-wkK"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="width" secondItem="8L0-Cx-lec" secondAttribute="width" multiplier="0.45" id="lLy-I5-tND"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="top" secondItem="SOq-ss-YyY" secondAttribute="bottom" constant="8" id="nlP-kT-U8j"/>
                             <constraint firstItem="1kv-Pl-ice" firstAttribute="height" secondItem="8L0-Cx-lec" secondAttribute="height" multiplier="0.25" id="p5n-Uz-Z1S"/>
-                            <constraint firstItem="thw-Nt-sBX" firstAttribute="top" secondItem="Bdk-se-2Az" secondAttribute="bottom" constant="44" id="udt-Y3-LQa"/>
-                            <constraint firstItem="Dpk-PM-Ma2" firstAttribute="centerX" secondItem="thw-Nt-sBX" secondAttribute="centerX" id="wMs-bN-yXY"/>
+                            <constraint firstItem="1kv-Pl-ice" firstAttribute="centerY" secondItem="8L0-Cx-lec" secondAttribute="centerY" constant="100" id="rp5-ar-WIp"/>
+                            <constraint firstItem="WKA-Xy-L3a" firstAttribute="centerY" secondItem="8L0-Cx-lec" secondAttribute="centerY" constant="100" id="vCt-wV-P5y"/>
                             <constraint firstItem="CfF-fp-jCq" firstAttribute="centerX" secondItem="8L0-Cx-lec" secondAttribute="centerX" id="y8G-Df-gSR"/>
                             <constraint firstItem="QSB-Ww-s1U" firstAttribute="centerX" secondItem="WKA-Xy-L3a" secondAttribute="centerX" id="yim-h7-zT2"/>
                         </constraints>
@@ -140,7 +132,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController autoresizesArchivedViewToFullSize="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t2i-pu-Dlo"/>
@@ -298,7 +289,7 @@
                                     <action selector="pairTogglePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDq-ca-27A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-qe-705">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-qe-705">
                                 <rect key="frame" x="109" y="11" width="111" height="72"/>
                                 <connections>
                                     <action selector="kanaTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPg-KS-exR"/>
@@ -369,8 +360,9 @@
                         <outlet property="wrongButton" destination="Mwm-5E-y2E" id="zrb-Y2-FNd"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106.5" y="118.5"/>
+            <point key="canvasLocation" x="220" y="96"/>
         </scene>
         <!--Full Word View Controller-->
         <scene sceneID="meI-02-gN4">
@@ -459,7 +451,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-454" y="823"/>
+            <point key="canvasLocation" x="-1242" y="-141"/>
         </scene>
         <!--Cheat Sheet View Controller-->
         <scene sceneID="eaf-SZ-6Sl">
@@ -488,37 +480,37 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPX-Fg-dxP">
-                                <rect key="frame" x="233" y="40" width="30" height="30"/>
+                                <rect key="frame" x="233" y="34" width="30" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.94098907709121704" blue="0.94034159183502197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
-                                <state key="normal" title="び"/>
+                                <state key="normal" title="じ"/>
                                 <connections>
                                     <action selector="hiraTenButtonPressed:" destination="Usa-wn-08L" eventType="touchUpInside" id="Dze-7e-E64"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-ls-pcO">
-                                <rect key="frame" x="271" y="40" width="30" height="30"/>
+                                <rect key="frame" x="271" y="34" width="30" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.94098907709121704" blue="0.94034159183502197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
-                                <state key="normal" title="ヒ"/>
+                                <state key="normal" title="シ"/>
                                 <connections>
                                     <action selector="kataButtonPressed:" destination="Usa-wn-08L" eventType="touchUpInside" id="cTc-mc-Qjm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vp-Vd-Usa">
-                                <rect key="frame" x="315" y="40" width="30" height="30"/>
+                                <rect key="frame" x="315" y="34" width="30" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.94098907709121704" blue="0.94034159183502197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
-                                <state key="normal" title="ビ"/>
+                                <state key="normal" title="ジ"/>
                                 <connections>
                                     <action selector="kataTenButtonPressed:" destination="Usa-wn-08L" eventType="touchUpInside" id="5Mz-HG-yIu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hej-Jg-nVJ">
-                                <rect key="frame" x="187" y="40" width="30" height="30"/>
+                                <rect key="frame" x="187" y="34" width="30" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
-                                <state key="normal" title="ひ"/>
+                                <state key="normal" title="し"/>
                                 <connections>
                                     <action selector="hiraButtonPressed:" destination="Usa-wn-08L" eventType="touchUpInside" id="8uK-AR-ApC"/>
                                 </connections>
@@ -541,12 +533,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="b1" destination="Hej-Jg-nVJ" id="535-pH-hOv"/>
+                        <outlet property="b2" destination="zPX-Fg-dxP" id="rBa-Rc-nbc"/>
+                        <outlet property="b3" destination="yhQ-ls-pcO" id="wfL-SZ-fzQ"/>
+                        <outlet property="b4" destination="3Vp-Vd-Usa" id="Z5D-1f-Oep"/>
                         <outlet property="characterListImage" destination="SBy-2w-6NB" id="pOm-mQ-zHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTH-nk-ka3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207.5" y="1032.5"/>
+            <point key="canvasLocation" x="-1054" y="705"/>
         </scene>
         <!--Options Menu View Controller-->
         <scene sceneID="nep-Wx-RD0">
@@ -594,19 +590,19 @@
                                     <action selector="pairsSwitchToggled:" destination="tlR-Og-psa" eventType="valueChanged" id="kps-0x-dXj"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1. Choose kana to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyn-RF-gKC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1. Choose kana to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyn-RF-gKC">
                                 <rect key="frame" x="92" y="232" width="183" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="If you know the kana (skip)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCI-VB-x6j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="If you know the kana (skip)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCI-VB-x6j">
                                 <rect key="frame" x="102" y="311" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="If you didn't know it (recycle)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJs-5X-dAu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="If you didn't know it (recycle)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJs-5X-dAu">
                                 <rect key="frame" x="102" y="405" width="220" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -618,7 +614,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="✔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3Z-1L-bLg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="✔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3Z-1L-bLg">
                                 <rect key="frame" x="52" y="302" width="41" height="39"/>
                                 <color key="backgroundColor" red="0.83529411760000005" green="0.94901960780000005" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -629,7 +625,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpy-5z-xeb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpy-5z-xeb">
                                 <rect key="frame" x="52" y="349" width="41" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.99607843139999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -640,7 +636,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="✗" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5Q-rV-XQc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="✗" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5Q-rV-XQc">
                                 <rect key="frame" x="52" y="396" width="41" height="39"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.89019607840000003" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -651,7 +647,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="For a hint (reveal)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4t-De-jEc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="For a hint (reveal)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4t-De-jEc">
                                 <rect key="frame" x="102" y="358" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -687,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukE-Pa-tVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="61"/>
+            <point key="canvasLocation" x="745" y="96"/>
         </scene>
     </scenes>
     <resources>

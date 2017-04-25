@@ -11,41 +11,38 @@
 @import UIKit;
 
 @interface CheatSheetViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *b1;
+@property (weak, nonatomic) IBOutlet UIButton *b2;
+@property (weak, nonatomic) IBOutlet UIButton *b3;
+@property (weak, nonatomic) IBOutlet UIButton *b4;
 
 @property (weak, nonatomic) IBOutlet UIImageView *characterListImage;
 @end
 
 @implementation CheatSheetViewController {
-    UIImage* hiragana;
-    UIImage* hiraganatenten;
-    UIImage* katakana;
-    UIImage* katakanatenten;
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"CheatSheetViewController loaded");
-    hiragana = [UIImage imageNamed:@"hirasheet"];
-    hiraganatenten = [UIImage imageNamed:@"hirasheettenten"];
-    katakana = [UIImage imageNamed:@"katasheet"];
-    katakanatenten = [UIImage imageNamed:@"kanasheettenten"];
-    _characterListImage.image = hiragana;
+    _characterListImage.image = [UIImage imageNamed:@"hirasheet"];
+    
 }
 
 - (IBAction)hiraButtonPressed:(UIButton *)sender {
-    _characterListImage.image = hiragana;
+    _characterListImage.image = [UIImage imageNamed:@"hirasheet"];
 }
 
 - (IBAction)hiraTenButtonPressed:(UIButton *)sender {
-    _characterListImage.image = hiraganatenten;
+    _characterListImage.image = [UIImage imageNamed:@"hirasheettenten"];
 }
 
 - (IBAction)kataButtonPressed:(UIButton *)sender {
-    _characterListImage.image = katakana;
+    _characterListImage.image = [UIImage imageNamed:@"katasheet"];
 }
 
 - (IBAction)kataTenButtonPressed:(UIButton *)sender {
-    _characterListImage.image = katakanatenten;
+    _characterListImage.image = [UIImage imageNamed:@"kanasheettenten"];
 }
 
 @end
