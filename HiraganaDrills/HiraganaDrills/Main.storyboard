@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="xGL-Zd-XRX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="xGL-Zd-XRX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -93,6 +93,14 @@
                                 <state key="normal" image="list-icon.png"/>
                                 <connections>
                                     <segue destination="Usa-wn-08L" kind="modal" animates="NO" id="2jL-Oi-8ku"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A30-OE-f1u">
+                                <rect key="frame" x="16" y="629" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="2Dq-Dh-JaW" kind="modal" id="0JI-XH-y62"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -684,6 +692,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukE-Pa-tVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="745" y="96"/>
+        </scene>
+        <!--Full Word View Controller-->
+        <scene sceneID="LT0-md-lNl">
+            <objects>
+                <viewController storyboardIdentifier="fullword" id="2Dq-Dh-JaW" customClass="FullWordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OdW-lR-SGe"/>
+                        <viewControllerLayoutGuide type="bottom" id="fmv-vY-jes"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IhT-Mo-bRg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbM-GK-Jgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="942"/>
         </scene>
     </scenes>
     <resources>

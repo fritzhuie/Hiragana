@@ -10,87 +10,74 @@
 #import "kanaLibrary.h"
 #import "CharacterView.h"
 
-#define WORD_VIEW_WIDTH 320.0f
-#define WORD_VIEW_HEIGHT 150.0f
-#define WORD_VIEW_Y 74.0f
+@interface KanaButton : UILabel {}
+-(void)setColor;
+-(void)inititalizeAtPosition:(CGRect) rect;
+@end
+
+@implementation KanaButton {
+    NSString* currentKana;
+}
+
+-(void)setColor{
+    [self setBackgroundColor:[UIColor blueColor]];
+}
+
+-(void)inititalizeAtPosition:(CGRect) rect {
+    [self setFrame:rect];
+    [self setText:@"ぁ"];
+    [self setAdjustsFontSizeToFitWidth:true];
+    [self setTextAlignment:NSTextAlignmentCenter];
+    [self drawTextInRect:rect];
+}
+
+@end
 
 @interface FullWordViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *kanaWordLabel;
-@property (weak, nonatomic) IBOutlet UIView *wordView;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecogniser;
-@property (weak, nonatomic) IBOutlet UILabel *answerBox;
 
 @end
 
 @implementation FullWordViewController {
     NSArray* wordList;
     NSString* currentWord;
-    NSArray* views;
-    NSDictionary* kanaLibrary;
+    NSDictionary* hirakanaLibrary;
+    NSDictionary* katakanaLibrary;
     NSDictionary* wordLibrary;
+    NSMutableArray* wordView;
 }
 
-@synthesize wordView,tapGestureRecogniser, kanaWordLabel, answerBox;
+@synthesize tapGestureRecogniser;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    kanaLibrary = HIRAGANA_DICT;
+    hirakanaLibrary = HIRAGANA_DICT;
+    katakanaLibrary = KATAKANA_DICT;
     wordList = [HIRAGANA_WORD_DICT allKeys];
-    answerBox.hidden = YES;
-    [self showNewWord];
+    wordView = [[NSMutableArray alloc]init];
+    [self createTestButton];
+}
+
+- (void)createTestButton {
+    KanaButton* b = [[KanaButton alloc]init];
+    [self.view addSubview:b];
+    [b inititalizeAtPosition:CGRectMake(200, 200, 100, 100)];
+    [wordView addObject:b];
+    [wordView[0] setColor];
 }
 
 - (IBAction)newWordButtonPressed:(id)sender {
-    [self showNewWord];
+    
 }
 
 - (void)showNewWord {
     currentWord = wordList[0]; //static for testing
-
-//TODO: Import word list and select random word
-    kanaWordLabel.text = [currentWord stringByReplacingOccurrencesOfString:@"/" withString:@""];
-}
-
-- (NSString *) translate:(NSString *)key {
-    if ([kanaLibrary objectForKey:key])
-        return [kanaLibrary objectForKey:key];
-    else
-        return @"error";
-}
-
-- (void)showAnswerForKanaAt:(CGPoint)location{
-    if ([wordList containsObject:currentWord]) {
-        NSArray* a = [currentWord componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"/"]];
-        CGFloat wordLength = ([currentWord length]/2)+((int)[currentWord length]% (int)2.0f);
-        CGFloat boxWidth =  320.0 / wordLength;
-        NSString* selectedKana;
-        int i = 0;
-        while(i < wordLength){
-            if (location.x < ((i+1)*boxWidth)){
-                selectedKana = a[i];
-                break;
-            }i++;}
-        kanaWordLabel.text = [[currentWord stringByReplacingOccurrencesOfString:a[i] withString:[self translate:selectedKana]] stringByReplacingOccurrencesOfString:@"/" withString:@""];
-    }
-
-//TODO: init CharacterView for each character, move animations and logic to that class
-}
-
-- (void)playAnswerAnimationForWord:(NSString*)answer WithBounds:(CGRect)bounds{
-    [answerBox setFrame:bounds];
-    [answerBox setBounds:bounds];
-    answerBox.text = answer;
-    answerBox.hidden = NO;
 }
 
 - (IBAction)tapDetected:(id)sender {
-    NSLog(@"X:%f Y:%f", [tapGestureRecogniser locationInView:wordView].x, [tapGestureRecogniser locationInView:wordView].y);
-    [self showAnswerForKanaAt:[tapGestureRecogniser locationInView:wordView]];
+    NSLog(@"X:%f Y:%f", [tapGestureRecogniser locationInView: self.view].x, [tapGestureRecogniser locationInView:self.view].y);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
