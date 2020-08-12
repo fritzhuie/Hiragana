@@ -3,7 +3,7 @@
 //  hirigana drills
 //
 //  Created by Fritz huie on 11/9/14.
-//  Copyright (c) 2014 Apportable. All rights reserved.
+//  Copyright (c) 2014 Fritz Huie. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -17,14 +17,15 @@
 @property (nonatomic, strong) NSDictionary* hirigana;
 
 @property (weak, nonatomic) IBOutlet UILabel *hiriganaLabel;
+@property (weak, nonatomic) IBOutlet UIButton *unityChanRestartButton;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UIButton *next;
 @property (weak, nonatomic) IBOutlet UIButton *answer;
 
-@property (weak, nonatomic) IBOutlet UIButton *beginDrillButton;
+
 @property (weak, nonatomic) IBOutlet UIButton *beginDrillButtonSmall;
 @property (weak, nonatomic) IBOutlet UILabel *counter;
-@property (weak, nonatomic) IBOutlet UILabel *allDoneLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *wrongButton;
 @property (weak, nonatomic) IBOutlet UIImageView *cardBackImage;
 
@@ -50,7 +51,7 @@ BOOL katakanaSelected;
 + (bool)katakanaSelected { return katakanaSelected; }
 + (void)setKatakana:(bool)setKatakana { katakanaSelected = setKatakana; }
 
-@synthesize next, wrongButton, answer, hiriganaLabel, answerLabel, beginDrillButtonSmall, beginDrillButton, allDoneLabel, cardBackImage, soundToggle, revealAnswerButton, pairToggleButton;
+@synthesize next, answerLabel, unityChanRestartButton, wrongButton, answer, hiriganaLabel, beginDrillButtonSmall, cardBackImage, soundToggle, revealAnswerButton, pairToggleButton;
 @synthesize counter;
 @synthesize soundPlayer;
 
@@ -59,37 +60,22 @@ BOOL katakanaSelected;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    willIncludePairs = YES;
+    willIncludePairs = NO;
     delegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     [soundToggle setImage:[UIImage imageNamed:(delegate.sound ? @"sound.png" : @"nosound.png")] forState:UIControlStateNormal];
+    [pairToggleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [pairToggleButton setBackgroundImage:[UIImage imageNamed:@"buttonStrikethrough"] forState:UIControlStateNormal];
     [self startDrill];
 }
 
-- (void)showDefaultInterface{
-    beginDrillButtonSmall.hidden = YES;
-    hiriganaLabel.hidden = YES;
-    answerLabel.hidden = YES;
-    beginDrillButton.hidden = NO;
-    allDoneLabel.hidden = YES;
-    answer.hidden = YES;
-    next.hidden = YES;
-    counter.hidden = YES;
-    wrongButton.hidden = YES;
-    cardBackImage.hidden = YES;
-    soundToggle.hidden = YES;
-    revealAnswerButton.hidden = YES;
-}
-
 - (void)showDrillInterface {
+    unityChanRestartButton.hidden = YES;
     beginDrillButtonSmall.hidden = NO;
     hiriganaLabel.hidden = NO;
-    answerLabel.hidden = YES;
-    beginDrillButton.hidden = YES;
     answer.hidden = NO;
     next.hidden = NO;
     counter.hidden = NO;
-    allDoneLabel.hidden = YES;
     wrongButton.hidden = YES;
     cardBackImage.hidden = NO;
     soundToggle.hidden = SOUND_TOGGLE_DIABLED;
@@ -98,10 +84,18 @@ BOOL katakanaSelected;
 
 
 - (void)showCompletedInterface {
-    [self showDefaultInterface];
+    answerLabel.hidden = YES;
+    unityChanRestartButton.hidden = NO;
+    hiriganaLabel.hidden = YES;
+    answer.hidden = YES;
+    next.hidden = YES;
+    counter.hidden = YES;
+    wrongButton.hidden = YES;
+    cardBackImage.hidden = YES;
+    soundToggle.hidden = YES;
+    revealAnswerButton.hidden = YES;
     hiriganaLabel.hidden = NO;
     counter.hidden = YES;
-    allDoneLabel.hidden = YES;
     wrongButton.hidden = YES;
     cardBackImage.hidden = YES;
     soundToggle.hidden = YES;
@@ -116,9 +110,8 @@ BOOL katakanaSelected;
     willIncludePairs = willIncludePairs ? NO : YES;
     if (willIncludePairs) {
         [pairToggleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [pairToggleButton setBackgroundImage:nil forState:UIControlStateNormal];
+        [pairToggleButton setBackgroundImage:[UIImage imageNamed:@"buttonNoStrikethrough"] forState:UIControlStateNormal];
     }else{
-        [pairToggleButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [pairToggleButton setBackgroundImage:[UIImage imageNamed:@"buttonStrikethrough"] forState:UIControlStateNormal];
     }
     [self startDrill];
@@ -152,8 +145,8 @@ BOOL katakanaSelected;
 
 - (void)showNewHirigana
 {
-    answerLabel.hidden = YES;
     revealAnswerButton.hidden = NO;
+    answerLabel.hidden = YES;
     
     if (_remaining.count > 0) {
         int i = rand()%_remaining.count;
@@ -198,12 +191,12 @@ BOOL katakanaSelected;
 - (IBAction)help:(id)sender {
 
 }
+
 - (void)revealAnswer
 {
     NSString *displayAnswer = [NSString stringWithFormat:@"\" %@ \"", [self translate:currentDisplayed]];
     answerLabel.text = displayAnswer;
     answerLabel.hidden = NO;
-
     if (delegate.sound) {
         NSString* soundPath = [NSString stringWithFormat:@"kana/%@", kanaLibrary[currentDisplayed]];
         if(soundPath)
