@@ -16,11 +16,11 @@
                         <viewControllerLayoutGuide type="bottom" id="7V5-7q-NiM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8L0-Cx-lec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kv-Pl-ice">
-                                <rect key="frame" x="16" y="250" width="169" height="167"/>
+                                <rect key="frame" x="16" y="242.5" width="169" height="162"/>
                                 <color key="backgroundColor" white="0.95708439625850339" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKA-Xy-L3a">
-                                <rect key="frame" x="190.5" y="250" width="168.5" height="167"/>
+                                <rect key="frame" x="190.5" y="242.5" width="168.5" height="162"/>
                                 <color key="backgroundColor" white="0.95708439625850339" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VW-VL-vfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-502.17391304347831" y="63.950892857142854"/>
+            <point key="canvasLocation" x="-503.19999999999999" y="63.418290854572717"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -523,7 +523,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XDw-kJ-B7Z"/>
+        <segue reference="OeL-6T-Ge5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
